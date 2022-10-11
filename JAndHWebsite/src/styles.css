@@ -7,7 +7,7 @@
 :root {
   --menuBackgroundColor-gs-menu: white;
   --mobileMenuBackgroundColor-gs-menu: white;
-  --menuHeight-gs-menu: 80px;
+  --menuHeight-gs-menu: 70px;
   --mobileMenuWidth-gs-menu: 200px;
   --menuLinksColor-gs-menu: black;
   --menuLinksHoverColor-gs-menu: rgb(21, 21, 21);
@@ -17,6 +17,19 @@
   --mobileMenuExitDivColor-gs-menu: grey;
 }
 /* ---------------------------------------------------------- */
+
+.carousel-tag{
+  height: calc(100vh - var(--menuHeight-gs-menu));
+}
+
+.carousel-content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: aquamarine;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .navBarContainer{
   height: var(--menuHeight-gs-menu);
@@ -43,3 +56,22 @@
   margin: 0px 30px !important;
   padding: 0px !important;
 }
+
+/* ------------------------- SCROLL ------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(60,182,233);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1364AC;
+}
+/* ---------------------------------------------------------- */
