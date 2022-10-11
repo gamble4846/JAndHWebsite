@@ -36,6 +36,10 @@
   position: relative;
 }
 
+.gs-menu-items{
+  padding-top: calc(var(--menuHeight-gs-menu) + 10px);
+}
+
 .aboutUsContainer {
   height: calc(100vh - var(--menuHeight-gs-menu));
   max-width: 1000px;
