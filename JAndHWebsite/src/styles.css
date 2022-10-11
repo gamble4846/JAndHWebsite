@@ -28,6 +28,14 @@
   height: calc(100vh - var(--menuHeight-gs-menu));
 }
 
+.contactUsFormContainer{
+  color: black;
+  max-width: 1000px;
+  padding: 30px;
+  margin: auto;
+  position: relative;
+}
+
 .aboutUsContainer {
   height: calc(100vh - var(--menuHeight-gs-menu));
   max-width: 1000px;
@@ -67,6 +75,11 @@
 .aboutUsHeader {
   width: 100%;
   font-size: 35px;
+}
+
+.contactUsHeader{
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .aboutUsContent {
