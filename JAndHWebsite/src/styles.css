@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+@import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
+@import "~ng-zorro-antd/button/style/index.min.css";  /* Import one component's styles */
+
+/*------------------------ Navbar Root ---------------------- */
+:root {
+  --menuBackgroundColor-gs-menu: white;
+  --mobileMenuBackgroundColor-gs-menu: white;
+  --menuHeight-gs-menu: 80px;
+  --mobileMenuWidth-gs-menu: 200px;
+  --menuLinksColor-gs-menu: black;
+  --menuLinksHoverColor-gs-menu: rgb(21, 21, 21);
+  --activeLinksColor-gs-menu: grey;
+  --activeLinkLineColor-gs-menu: grey;
+  --activeLinkLineBottom-gs-menu: -22px;
+  --mobileMenuExitDivColor-gs-menu: grey;
+}
+/* ---------------------------------------------------------- */
+
+.navBarContainer{
+  height: var(--menuHeight-gs-menu);
+}
+
+.routerContainer{
+  height: calc(100vh - var(--menuHeight-gs-menu));
+  overflow: auto;
+  color: white;
+}
+
+.gs-menu-toggle-icon{
+  fill: black !important;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.gs-menu-left-container{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.gs-menu .gs-menu-left-container .gs-menu-items ul li a {
+  margin: 0px 30px !important;
+  padding: 0px !important;
+}
