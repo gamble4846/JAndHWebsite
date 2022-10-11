@@ -37,7 +37,7 @@
 }
 
 .gs-menu-items{
-  padding-top: calc(var(--menuHeight-gs-menu) + 10px);
+  padding-top: calc(var(--menuHeight-gs-menu) + 100px) !important;
 }
 
 .aboutUsContainer {
