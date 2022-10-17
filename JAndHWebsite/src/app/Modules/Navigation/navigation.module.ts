@@ -5,13 +5,15 @@ import { NavigationRoutingModule } from './navigation-routing.module';
 import { NavbarComponent } from './Components/Navbar/navbar.component';
 import { LoaderComponent } from './Components/Loader/loader/loader.component';
 import { FooterComponent } from './Components/Footer/footer.component';
+import { ScrollToTopComponent } from './Components/ScrollToTop/scroll-to-top.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
     LoaderComponent,
-    FooterComponent
+    FooterComponent,
+    ScrollToTopComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { FooterComponent } from './Components/Footer/footer.component';
   ],
   exports:[
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ScrollToTopComponent
   ]
 })
 export class NavigationModule { }

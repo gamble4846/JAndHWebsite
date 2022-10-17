@@ -3,3 +3,11 @@
     -moz-box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
     box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
 }
+
+.ScrollToTopContainer{
+    height: max-content;
+    width: max-content;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
