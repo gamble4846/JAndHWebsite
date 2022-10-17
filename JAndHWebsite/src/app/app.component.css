@@ -1,0 +1,5 @@
+.navBarContainer{
+    -webkit-box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
+    box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
+}

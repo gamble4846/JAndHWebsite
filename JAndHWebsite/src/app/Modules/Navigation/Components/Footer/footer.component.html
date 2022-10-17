@@ -15,11 +15,7 @@
               </div>
               <div class="gs-footBody">
                   <ul class="gs-links-list">
-                      <li><a>Link 1</a></li>
-                      <li><a>Link 2</a></li>
-                      <li><a>Link 3</a></li>
-                      <li><a>Link 4</a></li>
-                      <li><a>Link 5</a></li>
+                      <li *ngFor="let menu of menuData"><a>{{menu.name}}</a></li>
                   </ul>
               </div>
           </div>

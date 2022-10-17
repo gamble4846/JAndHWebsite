@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,17 +10,12 @@ export class NavbarComponent implements OnInit {
 
   menuOpen:boolean = false;
 
-  menuData:any = [
-    {name:"Home", route:"/"},
-    {name:"About Us", route:"/"},
-    {name:"Products", route:"/"},
-    {name:"Services", route:"/"},
-    {name:"Quote Now", route:"/"},
-  ];
+  menuData:any = [];
 
-  constructor() { }
+  constructor(private _cs: CommonService) { }
 
   ngOnInit(): void {
+    this.menuData = this._cs.getMenuData();
   }
 
   OpenMenu(){

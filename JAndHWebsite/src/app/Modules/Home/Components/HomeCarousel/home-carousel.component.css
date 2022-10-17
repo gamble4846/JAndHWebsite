@@ -1,0 +1,29 @@
+.carousel-content-data{
+    height: max-content;
+    width: 500px;
+    max-width: calc(100% - (100px));
+    max-height: calc(100% - (100px));
+    background-color: rgb(255 255 255 / 70%);
+    border-radius: 20px;
+    padding: 50px 25px;
+    margin: 50px;
+    display: block;
+}
+
+.carousel-content-data .header{
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: .5px;
+    margin-bottom: 15px;
+    display: block;
+    color: #032e49;
+}
+
+.carousel-content-data .Title{
+    font-size: 60px;
+    line-height: 55px;
+    margin-bottom: 25px;
+    letter-spacing: -1px !important;
+    font-weight: 600 !important;
+    color: #032e49 !important;
+}

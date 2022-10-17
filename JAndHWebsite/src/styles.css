@@ -36,12 +36,11 @@
   position: relative;
 }
 
-.gs-menu-items{
+.gs-menu-items-Mobile{
   padding-top: calc(var(--menuHeight-gs-menu) + 100px) !important;
 }
 
 .aboutUsContainer {
-  height: calc(100vh - var(--menuHeight-gs-menu));
   max-width: 1000px;
   padding: 30px;
   overflow: hidden;
@@ -55,9 +54,7 @@
 }
 
 .readMoreButtonContainer {
-  position: absolute;
-  bottom: 50px;
-  left: 30px;
+  padding-top: 20px;
 }
 
 .aboutUsDataContainer {
@@ -98,7 +95,6 @@
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: aquamarine;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: auto;

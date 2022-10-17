@@ -1,0 +1,36 @@
+.GridRow{
+    padding: 8px;
+}
+
+.GridCol{
+    height: max-content;
+    color: black;
+    padding: 8px 8px;
+}
+
+.InnerGridCol{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.InnerGridCol:hover{
+    scale: 105%;
+}
+
+.InnerGridData{
+    padding: 30px;
+}
+
+.InnerGridData .title{
+    font-size: 21px !important;
+    line-height: 24px !important;
+    font-weight: 500 !important;
+    color: #000000 !important;
+}
+
+.InnerGridData .showMore{
+    padding-top: 5px;
+    text-decoration: underline;
+}

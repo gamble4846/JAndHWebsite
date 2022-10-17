@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  menuData:any = [];
+
+  constructor(private _cs: CommonService) { }
 
   ngOnInit(): void {
+    this.menuData = this._cs.getMenuData();
   }
 
 }

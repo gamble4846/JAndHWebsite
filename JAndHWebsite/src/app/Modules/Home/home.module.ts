@@ -14,6 +14,8 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { HomeGridComponent } from './Components/HomeGrid/home-grid.component';
 
 
 
@@ -24,7 +26,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     ProductsCarouselComponent,
     HomeCarouselComponent,
     ServicesCarouselComponent,
-    ContactUsFormComponent
+    ContactUsFormComponent,
+    HomeGridComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +38,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzFormModule,
     FormsModule,
     ReactiveFormsModule,
-    NzInputModule
+    NzInputModule,
+    NzGridModule
   ]
 })
 export class HomeModule { }
