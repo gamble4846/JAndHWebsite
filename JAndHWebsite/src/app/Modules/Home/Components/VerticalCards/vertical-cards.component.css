@@ -4,12 +4,13 @@
   height: max-content;
   color: white;
   margin: 50px auto;
+  padding: 0px 10px;
 }
 
 .card{
   height: 400px;
   width: 100%;
-  margin: 10px 20px;
+  margin-top: 10px;
   position: relative;
   display: flex;
   align-items: center;
