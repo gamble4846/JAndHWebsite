@@ -16,6 +16,7 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { HomeGridComponent } from './Components/HomeGrid/home-grid.component';
+import { VerticalCardsComponent } from './Components/VerticalCards/vertical-cards.component';
 
 
 
@@ -27,7 +28,8 @@ import { HomeGridComponent } from './Components/HomeGrid/home-grid.component';
     HomeCarouselComponent,
     ServicesCarouselComponent,
     ContactUsFormComponent,
-    HomeGridComponent
+    HomeGridComponent,
+    VerticalCardsComponent
   ],
   imports: [
     CommonModule,
