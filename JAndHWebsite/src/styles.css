@@ -539,3 +539,16 @@
     font-size: 45px !important;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .carousel-content-data .Title{
+    text-align: center !important;
+  }
+
+  .carousel-content-data .header{
+    text-align: center !important;
+  }
+  .carousel-content-data .ButtonContainer{
+    text-align: center !important;
+  }
+}
