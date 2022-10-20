@@ -1,0 +1,67 @@
+.verticalCardsContainer{
+  width: 100%;
+  max-width: 1000px;
+  height: max-content;
+  color: white;
+  margin: 50px auto;
+}
+
+.card{
+  height: 400px;
+  width: 100%;
+  margin: 10px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  filter: brightness(50%);
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+.card-data{
+  height: max-content;
+  margin: auto;
+}
+
+.card-header{
+  text-align: center;
+  font-size: 22px;
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+
+.card-content{
+  text-align: center;
+  padding: 0px 10px;
+  font-size: 14px;
+}
+
+.card-footer{
+  padding-top: 30px;
+  text-align: center;
+}
+
+.card-button{
+  background: linear-gradient(90deg, rgba(3,46,73,1) 0%, rgba(3,27,73,1) 74%);
+  border: 0px;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+.card-button:hover{
+  background: linear-gradient(90deg, rgba(3,73,72,1) 0%, rgba(3,54,73,1) 61%);
+}
