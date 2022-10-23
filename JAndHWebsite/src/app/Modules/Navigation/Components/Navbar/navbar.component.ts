@@ -28,22 +28,7 @@ export class NavbarComponent implements OnInit {
 
   OpenRoute(menu:any){
     this.CloseMenu();
-    if(menu.route == "justRefreshData"){
-      this.RefreshData();
-    }
-    else{
-      // this._cs.ChangePage(menu.route);
-    }
-  }
-
-  RefreshData(){
-    // this.LocalBase.SaveMoviesFromSheetAndToLocalBase().subscribe((response:any) => {
-    //   this.CustomNotification.SmallMessage("success","Movies Updated");
-    // });
-
-    // this.LocalBase.SaveTvShowsFromSheetAndToLocalBase().subscribe((response:any) => {
-    //   this.CustomNotification.SmallMessage("success","TvShows Updated");
-    // });
+    this._cs.changePage(menu.route,menu.elementId);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,16 +7,25 @@ import { Injectable } from '@angular/core';
 export class CommonService {
 
   menuData:any = [
-    {name:"Home", route:"#Home"},
-    {name:"About Us", route:"#AboutUs"},
-    {name:"Products", route:"/"},
-    {name:"Services", route:"/"},
-    {name:"Quote Now", route:"/"},
+    {name:"Home", route:"/Home", elementId:"Home"},
+    {name:"About Us", route:"/Home", elementId:"AboutUs"},
+    {name:"Products", route:"/Home", elementId:"Products"},
+    {name:"Services", route:"/Home", elementId:"Services"},
+    {name:"Quote Now", route:"/Home", elementId:"QuoteNow"},
   ];
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   getMenuData(){
     return this.menuData;
+  }
+
+  changePage(route:string, elementId:string){
+    this.router.navigate([route]);
+    
+    setTimeout(() => {
+      let element:any = document.getElementById(elementId);
+      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }, 100);
   }
 }

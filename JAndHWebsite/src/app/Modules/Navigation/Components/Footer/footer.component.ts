@@ -16,4 +16,8 @@ export class FooterComponent implements OnInit {
     this.menuData = this._cs.getMenuData();
   }
 
+  OpenRoute(menu:any){
+    this._cs.changePage(menu.route,menu.elementId);
+  }
+
 }
