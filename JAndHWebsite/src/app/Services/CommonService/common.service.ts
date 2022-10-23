@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class CommonService {
 
   menuData:any = [
-    {name:"Home", route:"/"},
-    {name:"About Us", route:"/"},
+    {name:"Home", route:"#Home"},
+    {name:"About Us", route:"#AboutUs"},
     {name:"Products", route:"/"},
     {name:"Services", route:"/"},
     {name:"Quote Now", route:"/"},

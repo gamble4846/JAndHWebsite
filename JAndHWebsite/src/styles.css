@@ -24,6 +24,10 @@
 }
 /* ---------------------------------------------------------- */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .carousel-tag {
   height: calc(100vh - var(--menuHeight-gs-menu));
 }
