@@ -98,6 +98,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: auto;
+  background-position: center;
 }
 
 .navBarContainer {
