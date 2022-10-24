@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-vertical-cards',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerticalCardsComponent implements OnInit {
 
+  @Input() makeToOrderData:any = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.makeToOrderData);
+  }
+
+  ngOnChanges() {
+    this.ngOnInit();
   }
 
 }

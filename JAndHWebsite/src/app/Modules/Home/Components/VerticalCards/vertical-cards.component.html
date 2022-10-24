@@ -1,55 +1,19 @@
 <div class="verticalCardsContainer">
   <div nz-row [nzGutter]="{ xs: 0, sm: 0, md: 24, lg: 32 }">
-    <div nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="8">
+    <div nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="8" *ngFor="let data of makeToOrderData">
       <div class="card">
-        <div class="card-image" [ngStyle]="{'background': 'url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/martha-mulholland-standard-architecture-malibu-house-221-edit-1647617139.jpg)'}">
+        <div class="card-image" [ngStyle]="{'background': 'url(' + data.Image + ')'}">
 
         </div>
         <div class="card-data">
           <div class="card-header">
-            Header
+            {{data.Title}}
           </div>
           <div class="card-content">
-            Just a personal touch, try our customized packing that serves your requirements.Customized Corporate Packaging – for the best in business from the best in business. Give your corporate gifting an aesthetic appeal where you can gift customized
+            {{data.Description}}
           </div>
           <div class="card-footer">
-            <button class="card-button">Learn More</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="8">
-      <div class="card">
-        <div class="card-image" [ngStyle]="{'background-image': 'url(https://www.wallpaperboulevard.com/image/BedroomWallpaperIdeas11.jpg)'}">
-
-        </div>
-        <div class="card-data">
-          <div class="card-header">
-            Header
-          </div>
-          <div class="card-content">
-            Just a personal touch, try our customized packing that serves your requirements.Customized Corporate Packaging – for the best in business from the best in business. Give your corporate gifting an aesthetic appeal where you can gift customized
-          </div>
-          <div class="card-footer">
-            <button class="card-button">Learn More</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="8">
-      <div class="card">
-        <div class="card-image"  [ngStyle]="{'background-image': 'url(https://i.pinimg.com/originals/4b/ed/63/4bed63d74192362dba9f5425d42e7f3c.jpg)'}">
-
-        </div>
-        <div class="card-data">
-          <div class="card-header">
-            Header
-          </div>
-          <div class="card-content">
-            Just a personal touch, try our customized packing that serves your requirements.Customized Corporate Packaging – for the best in business from the best in business. Give your corporate gifting an aesthetic appeal where you can gift customized
-          </div>
-          <div class="card-footer">
-            <button class="card-button">Learn More</button>
+            <button class="card-button">{{data.ButtonName}}</button>
           </div>
         </div>
       </div>
