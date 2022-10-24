@@ -12,7 +12,6 @@ export class VerticalCardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.makeToOrderData);
   }
 
   ngOnChanges() {
