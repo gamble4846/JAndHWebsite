@@ -36,4 +36,12 @@ export class CommonService {
   ShowContactUsModal(){
     document.getElementById("ShowContactUsModalBTN")?.click();
   }
+
+  ShowLoader(){
+    document.getElementById("loaderContainer")?.classList.add("show");
+  }
+
+  HideLoader(){
+    document.getElementById("loaderContainer")?.classList.remove("show");
+  }
 }

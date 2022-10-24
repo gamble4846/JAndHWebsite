@@ -1,40 +1,14 @@
 <nz-carousel nzAutoPlay class="carousel-tag">
-  <div nz-carousel-content class="carousel-content" [ngStyle]="{'background-image': 'url(https://static01.nyt.com/images/2020/10/25/realestate/19shopping1/oakImage-1602795344944-superJumbo.jpg)'}">
+  <div *ngFor="let data of homeCarouselData" nz-carousel-content class="carousel-content" [ngStyle]="{'background-image': 'url('+ data.image +')'}">
     <div class="carousel-content-data">
       <div class="header">
         BEST OFFER FOR YOU
       </div>
       <div class="Title">
-        Bedsheet Collection
+        {{data.header}}
       </div>
       <div class="ButtonContainer">
         <button nz-button nzType="primary" (click)="_cs.changePageOnlyRoute('/Products/2')">EXPLORE NOW</button>
-      </div>
-    </div>
-  </div>
-  <div nz-carousel-content class="carousel-content" [ngStyle]="{'background-image': 'url(https://i.pinimg.com/originals/27/3b/a6/273ba6d587afc5e853815d91db01d8df.jpg)'}">
-    <div class="carousel-content-data">
-      <div class="header">
-        BEST OFFER FOR YOU
-      </div>
-      <div class="Title">
-        Comforter Collection
-      </div>
-      <div class="ButtonContainer">
-        <button nz-button nzType="primary">EXPLORE NOW</button>
-      </div>
-    </div>
-  </div>
-  <div nz-carousel-content class="carousel-content" [ngStyle]="{'background-image': 'url(https://img3.goodfon.com/wallpaper/nbig/3/e9/interer-podushki-divan.jpg)'}">
-    <div class="carousel-content-data">
-      <div class="header">
-        BEST OFFER FOR YOU
-      </div>
-      <div class="Title">
-        Cushion Cover Collection
-      </div>
-      <div class="ButtonContainer">
-        <button nz-button nzType="primary">EXPLORE NOW</button>
       </div>
     </div>
   </div>

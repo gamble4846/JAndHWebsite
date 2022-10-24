@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
@@ -8,9 +8,15 @@ import { CommonService } from 'src/app/Services/CommonService/common.service';
 })
 export class HomeCarouselComponent implements OnInit {
 
+  @Input() homeCarouselData:any = [];
+
   constructor(public _cs:CommonService) { }
 
   ngOnInit(): void {
+    console.log(this.homeCarouselData);
   }
 
+  ngOnChanges() {
+    this.ngOnInit();
+  }
 }

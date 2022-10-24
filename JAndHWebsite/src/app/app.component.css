@@ -38,3 +38,7 @@
     background-color: #ffffff96;
     z-index: 999;
 }
+
+#loaderContainer.show{
+    display: flex !important;
+}
