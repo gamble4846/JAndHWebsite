@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   productsData:any = [];
   serviceData:any = [];
   makeToOrderData:any = [];
-  aboutUsData:any = [];
+  aboutUsData:any = {};
   footerData:any = [];
   homeCarouselData:any = [];
 
@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
     })
 
     this._GsDa.getAboutUs().subscribe((response:any) => {
-      this.aboutUsData = [...response.data];
+      this.aboutUsData = response.data[0];
       completeCount++;
       this.apiGettingCompleted(completeCount, totalApi);
     })
@@ -66,9 +66,6 @@ export class HomeComponent implements OnInit {
   }
 
   setUpHomeCarouselData(){
-    console.log(this.productsData);
-    console.log(this.serviceData);
-
     this.productsData.forEach((product:any) => {
       if(product.ShowOnHome){
         let homeCarouselDataObj:any = {};
