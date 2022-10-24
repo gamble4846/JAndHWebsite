@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   serviceData:any = [];
   makeToOrderData:any = [];
   aboutUsData:any = {};
-  footerData:any = [];
+  footerData:any = {};
   homeCarouselData:any = [];
   productGridData:any = [];
   serviceGridData:any = [];
@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
     })
 
     this._GsDa.getFooter().subscribe((response:any) => {
-      this.footerData = [...response.data];
+      this.footerData = response.data[0];
       completeCount++;
       this.apiGettingCompleted(completeCount, totalApi);
     })

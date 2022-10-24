@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { CommonService } from 'src/app/Services/CommonService/common.service';
 })
 export class FooterComponent implements OnInit {
 
+  @Input() footerData:any = [];
+  
   menuData:any = [];
 
   constructor(private _cs: CommonService) { }
