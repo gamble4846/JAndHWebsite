@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   aboutUsData:any = {};
   footerData:any = [];
   homeCarouselData:any = [];
+  productGridData:any = [];
+  serviceGridData:any = [];
 
   constructor(public _cs:CommonService, public _GsDa:GoogleSheetDataAccessService) { }
 
@@ -62,6 +64,7 @@ export class HomeComponent implements OnInit {
     if(currentCount >= finalCount){
       this._cs.HideLoader();
       this.setUpHomeCarouselData();
+      this.setUpProductGridData();
     }
   }
 
@@ -89,6 +92,30 @@ export class HomeComponent implements OnInit {
     });
 
     this.homeCarouselData = [...this.homeCarouselData];
+  }
+
+  setUpProductGridData(){
+    this.productsData.forEach((product:any) => {
+      if(product.ShowOnBanner){
+        let homeGridDataObj:any = {};
+        homeGridDataObj.id = product.ProductID;
+        homeGridDataObj.header = product.Heading;
+        homeGridDataObj.image = product['Primary Image Link'];
+        homeGridDataObj.type = "Product";
+        this.productGridData.push(homeGridDataObj);
+      }
+    });
+
+    this.serviceData.forEach((service:any) => {
+      if(service.ShowOnBanner){
+        let homeGridDataObj:any = {};
+        homeGridDataObj.id = service.ServiceID;
+        homeGridDataObj.image = service['Primary Image Link'];
+        homeGridDataObj.header = service.Heading;
+        homeGridDataObj.type = "Service";
+        this.serviceGridData.push(homeGridDataObj);
+      }
+    });
   }
 
 }

@@ -1,78 +1,8 @@
 <div nz-row class="GridRow">
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://m.media-amazon.com/images/I/61GnO+UavZL._SL1400_.jpg)'}">
+    <div *ngFor="let data of homeGridData" nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
+        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(' + data.image + ')'}">
             <div class="InnerGridData">
-                <div class="title">Bedsheet Collection</div>
-                <div class="showMore">
-                    <span style="cursor: pointer;">Show More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://ii1.pepperfry.com/media/catalog/product/b/a/1100x1210/baby-bolster---pillow-set-banyan-tree-cuddle-cushion-by-oscar-home-baby-bolster---pillow-set-banyan--4g8rww.jpg)'}">
-            <div class="InnerGridData">
-                <div class="title">Pillow & Cushion Collection</div>
-                <div class="showMore">
-                    <span style="cursor: pointer;">Show More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://www.ulcdn.net/images/products/293149/original/Holmebrook_Upholstered_Bed_LP.jpg?1583939475)'}">
-            <div class="InnerGridData">
-                <div class="title">Comforter Collection</div>
-                <div class="showMore">
-                    <span style="cursor: pointer;">Show More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://assets.ajio.com/medias/sys_master/root/20201118/nViy/5fb48594f997dd8c839f1f41/-1117Wx1400H-461608631-pink-MODEL.jpg)'}">
-            <div class="InnerGridData">
-                <div class="title">Dohar Collection</div>
-                <div class="showMore">
-                    <span style="cursor: pointer;">Show More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://www.ikea.com/in/en/images/products/malm-ottoman-bed-black-brown__0594830_pe676181_s5.jpg)'}">
-            <div class="InnerGridData">
-                <div class="title">Bedsheet Collection</div>
-                <div class="showMore">
-                    <span style="cursor: pointer;">Show More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://cdn.shopify.com/s/files/1/0044/1208/0217/products/MARTHURDBWOSTRWNT-1_900x.jpg?v=1645000875)'}">
-            <div class="InnerGridData">
-                <div class="title">Bedsheet Collection</div>
-                <div class="showMore">
-                    <span style="cursor: pointer;">Show More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://www.ulcdn.net/images/products/352352/slide/1998x1089/Belize_Upholstered_Bed_Size_Queen_Colour_blue_merc1.jpg?1626238512)'}">
-            <div class="InnerGridData">
-                <div class="title">Bedsheet Collection</div>
-                <div class="showMore">
-                    <span style="cursor: pointer;">Show More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
-        <div class="InnerGridCol" [ngStyle]="{'background-image': 'url(https://cdn11.bigcommerce.com/s-a1aqxosd6a/images/stencil/1280x1280/products/20511/52585/B130-582__28303__98836__50792.1602724055.jpg?c=2)'}">
-            <div class="InnerGridData">
-                <div class="title">Bedsheet Collection</div>
+                <div class="title">{{data.header}}</div>
                 <div class="showMore">
                     <span style="cursor: pointer;">Show More</span>
                 </div>

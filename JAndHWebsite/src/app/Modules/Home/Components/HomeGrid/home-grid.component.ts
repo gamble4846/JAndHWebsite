@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home-grid',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeGridComponent implements OnInit {
 
+  @Input() homeGridData:any = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  ngOnChanges() {
+    this.ngOnInit();
+  }
 }
