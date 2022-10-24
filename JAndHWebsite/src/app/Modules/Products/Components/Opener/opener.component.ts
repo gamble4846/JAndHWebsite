@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
@@ -8,9 +9,13 @@ import { CommonService } from 'src/app/Services/CommonService/common.service';
 })
 export class OpenerComponent implements OnInit {
 
-  constructor(public _cs:CommonService) { }
+  ProductId:any = null;
+  
+  constructor(public _cs:CommonService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.ProductId = this.route.snapshot.paramMap.get('ProductId');
+    console.log("ProductId",this.ProductId);
   }
 
 }

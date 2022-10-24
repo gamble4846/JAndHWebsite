@@ -14,6 +14,7 @@ import { NavigationModule } from './Modules/Navigation/navigation.module';
 
 import { ModalModule } from './gs-lib/modal/modal.module'
 import { HomeModule } from './Modules/Home/home.module';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
 
 registerLocaleData(en);
 
@@ -29,7 +30,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NavigationModule,
     ModalModule,
-    HomeModule
+    HomeModule,
+    NzSpinModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

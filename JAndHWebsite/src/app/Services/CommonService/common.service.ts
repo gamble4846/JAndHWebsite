@@ -29,6 +29,10 @@ export class CommonService {
     }, 100);
   }
 
+  changePageOnlyRoute(route:string){
+    this.router.navigate([route]);
+  }
+
   ShowContactUsModal(){
     document.getElementById("ShowContactUsModalBTN")?.click();
   }

@@ -24,3 +24,17 @@
     width: 100%;
     height: 100%;
 }
+
+#loaderContainer{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: #ffffff96;
+    z-index: 999;
+}
