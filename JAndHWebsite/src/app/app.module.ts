@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationModule } from './Modules/Navigation/navigation.module';
 
+import { ModalModule } from './gs-lib/modal/modal.module'
+import { HomeModule } from './Modules/Home/home.module';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -25,6 +28,8 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NavigationModule,
+    ModalModule,
+    HomeModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

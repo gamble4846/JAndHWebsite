@@ -17,6 +17,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { HomeGridComponent } from './Components/HomeGrid/home-grid.component';
 import { VerticalCardsComponent } from './Components/VerticalCards/vertical-cards.component';
+import { ModalModule } from '../../gs-lib/modal/modal.module'
 
 
 
@@ -41,7 +42,11 @@ import { VerticalCardsComponent } from './Components/VerticalCards/vertical-card
     FormsModule,
     ReactiveFormsModule,
     NzInputModule,
-    NzGridModule
+    NzGridModule,
+    ModalModule
+  ],
+  exports:[
+    ContactUsFormComponent
   ]
 })
 export class HomeModule { }

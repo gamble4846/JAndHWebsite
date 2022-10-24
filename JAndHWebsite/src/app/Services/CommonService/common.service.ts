@@ -22,10 +22,14 @@ export class CommonService {
 
   changePage(route:string, elementId:string){
     this.router.navigate([route]);
-    
+
     setTimeout(() => {
       let element:any = document.getElementById(elementId);
       element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }, 100);
+  }
+
+  ShowContactUsModal(){
+    document.getElementById("ShowContactUsModalBTN")?.click();
   }
 }

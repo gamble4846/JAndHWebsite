@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'JAndHWebsite';
+  showContactUsModal = false;
+
+  hideContactUsModal(event:any){
+    if(event){
+      this.showContactUsModal = false;
+    }
+  }
+
+  ShowContactUsModal(){
+    this.showContactUsModal = true;
+  }
 }
