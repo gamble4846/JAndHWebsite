@@ -1,7 +1,7 @@
 <div class="openerContainer">
-    <div class="openerHeaderContainer" [ngStyle]="{'background-image': 'url(https://i.pinimg.com/originals/27/3b/a6/273ba6d587afc5e853815d91db01d8df.jpg)'}">
+    <div class="openerHeaderContainer" [ngStyle]="{'background-image': 'url(' + CoverImage + ')'}">
         <div class="openerHeader">
-            BEDSHEETS
+            {{Title}}
         </div>
     </div>
 </div>
@@ -12,22 +12,22 @@
         <div class="breadcrumbDevider">|</div>
         <div class="breadcrumbItem">Services</div>
         <div class="breadcrumbDevider">|</div>
-        <div class="breadcrumbItem">Bedsheets</div>
+        <div class="breadcrumbItem">{{Title}}</div>
     </div>
 </div>
 
 <div class="cards-container">
     <div class="cardsInnerContainer">
         <div nz-row>
-            <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol">
+            <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol" *ngFor="let innerService of currentInnerServices">
                 <div class="cardContainer">
-                    <div class="cardInnerContainer" (click)="_cs.ShowContactUsModal()">
+                    <div class="cardInnerContainer" (click)="cardClicked(innerService)">
                         <div class="cardImageContainer"  [ngStyle]="{'background-image': 'url(https://i.pinimg.com/originals/27/3b/a6/273ba6d587afc5e853815d91db01d8df.jpg)'}">
 
                         </div>
                         <div class="cardDataContainer">
-                            <div class="cardTitle">Title</div>
-                            <div class="cardSubtitle">SubTitle</div>
+                            <div class="cardTitle">{{innerService.Title}}</div>
+                            <div class="cardSubtitle">{{innerService['Inner Service Code']}}</div>
                         </div>
                     </div>
                 </div>

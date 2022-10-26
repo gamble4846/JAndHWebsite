@@ -14,8 +14,6 @@ export class ContactUsFormComponent implements OnInit {
 
   apiData:any = {};
 
-  @Input() currentProductServiceId:any = "";
-
   constructor(private fb: UntypedFormBuilder, public _GsDa:GoogleSheetDataAccessService, public _cs:CommonService) { }
 
   ngOnInit(): void {
@@ -43,7 +41,7 @@ export class ContactUsFormComponent implements OnInit {
         this.apiData.PhoneNumber = this.validateForm.value['phoneNumber'];
         this.apiData.Country = this.validateForm.value['country'];
         this.apiData.Message = this.validateForm.value['message'];
-        this.apiData.ProductServiceCode = this.currentProductServiceId;
+        this.apiData.ProductServiceCode = localStorage.getItem("currentInnerItemCode");
         this.apiData.DateTime = this.getCurrentDateTime();
         this._GsDa.postContactUsForm(this.apiData).subscribe((res:any) => {
           console.log(res);

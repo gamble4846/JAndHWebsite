@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/Services/CommonService/common.service';
+import { GoogleSheetDataAccessService } from 'src/app/Services/GoogleSheetDataAccess/google-sheet-data-access.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,14 +9,17 @@ import { CommonService } from 'src/app/Services/CommonService/common.service';
 })
 export class FooterComponent implements OnInit {
 
-  @Input() footerData:any = [];
+  footerData:any = {};
   
   menuData:any = [];
 
-  constructor(private _cs: CommonService) { }
+  constructor(private _cs: CommonService, public _GsDa:GoogleSheetDataAccessService) { }
 
   ngOnInit(): void {
     this.menuData = this._cs.getMenuData();
+    this._GsDa.getFooter().subscribe((res:any) => {
+      this.footerData = res.data[0];
+    })
   }
 
   OpenRoute(menu:any){

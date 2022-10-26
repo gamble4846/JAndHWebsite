@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/Services/CommonService/common.service';
+import { GoogleSheetDataAccessService } from 'src/app/Services/GoogleSheetDataAccess/google-sheet-data-access.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,11 +12,23 @@ export class NavbarComponent implements OnInit {
   menuOpen:boolean = false;
 
   menuData:any = [];
+  navbarData:any = {};
+  navarbarLogo:string = "";
 
-  constructor(private _cs: CommonService) { }
+  constructor(private _cs: CommonService,  public _GsDa:GoogleSheetDataAccessService) { }
 
   ngOnInit(): void {
     this.menuData = this._cs.getMenuData();
+    this._GsDa.getMainData().subscribe((response:any) => {
+      this.navbarData = response.data[0];
+      this.navarbarLogo = this.navbarData.Logo;
+
+      let titleelement: HTMLElement = document.createElement("div");
+
+      document.getElementById("mainFavicon")?.setAttribute("href", this.navbarData.Icon);
+      titleelement = document.getElementById("mainTitle") as HTMLElement;
+      titleelement.innerHTML = this.navbarData.Title;
+    })
   }
 
   OpenMenu(){
@@ -29,6 +42,10 @@ export class NavbarComponent implements OnInit {
   OpenRoute(menu:any){
     this.CloseMenu();
     this._cs.changePage(menu.route,menu.elementId);
+  }
+
+  goToHome(){
+    this._cs.changePage("Home","Home");
   }
 
 }

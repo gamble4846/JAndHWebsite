@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   constructor(public _cs:CommonService, public _GsDa:GoogleSheetDataAccessService) { }
 
   ngOnInit(): void {
+    localStorage.setItem("currentInnerItemCode", "");
     this.getApiData();
   }
 
@@ -75,7 +76,7 @@ export class HomeComponent implements OnInit {
         homeCarouselDataObj.id = product.ProductID;
         homeCarouselDataObj.image = product['Primary Image Link'];
         homeCarouselDataObj.header = product.Heading;
-        homeCarouselDataObj.type = "Product";
+        homeCarouselDataObj.type = "Products";
         this.homeCarouselData.push(homeCarouselDataObj);
       }
     });
@@ -86,7 +87,7 @@ export class HomeComponent implements OnInit {
         homeCarouselDataObj.id = service.ServiceID;
         homeCarouselDataObj.image = service['Primary Image Link'];
         homeCarouselDataObj.header = service.Heading;
-        homeCarouselDataObj.type = "Service";
+        homeCarouselDataObj.type = "Services";
         this.homeCarouselData.push(homeCarouselDataObj);
       }
     });
@@ -101,7 +102,7 @@ export class HomeComponent implements OnInit {
         homeGridDataObj.id = product.ProductID;
         homeGridDataObj.header = product.Heading;
         homeGridDataObj.image = product['Primary Image Link'];
-        homeGridDataObj.type = "Product";
+        homeGridDataObj.type = "Products";
         this.productGridData.push(homeGridDataObj);
       }
     });
@@ -112,7 +113,7 @@ export class HomeComponent implements OnInit {
         homeGridDataObj.id = service.ServiceID;
         homeGridDataObj.image = service['Primary Image Link'];
         homeGridDataObj.header = service.Heading;
-        homeGridDataObj.type = "Service";
+        homeGridDataObj.type = "Services";
         this.serviceGridData.push(homeGridDataObj);
       }
     });

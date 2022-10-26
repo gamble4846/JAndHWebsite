@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class GoogleSheetDataAccessService {
 
-  apiLink:string = "https://script.google.com/macros/s/AKfycbxO4ldt_2BHmIL7vqNGvbJmUbzUBrpZkQO4LdpBZO6qtEkNQgiJe0CvMVfWcwBxNnwxaA/exec";
+  apiLink:string = "https://script.google.com/macros/s/AKfycbxNgxsBmaTaPFmd6v2gVsTspBLQZNxOMasXJDvi5DsH6i5vPURRXrXwVA3C4UIeaaMMhg/exec";
   constructor(private http: HttpClient) { }
 
   getOptions(){
@@ -78,6 +78,14 @@ export class GoogleSheetDataAccessService {
 
   postContactUsForm(body:any){
     console.log(body);
+    return this.http.post(this.apiLink, body, this.getOptions());
+  }
+
+  getMainData(){
+    var body ={
+      "method": "GET",
+      "Action": "MAIN"
+    };
     return this.http.post(this.apiLink, body, this.getOptions());
   }
 }

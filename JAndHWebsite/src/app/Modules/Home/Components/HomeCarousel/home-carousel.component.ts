@@ -18,4 +18,8 @@ export class HomeCarouselComponent implements OnInit {
   ngOnChanges() {
     this.ngOnInit();
   }
+
+  exploreNowClicked(data:any){
+    this._cs.changePageOnlyRoute('/' + data.type + '/' + data.id);
+  }
 }
