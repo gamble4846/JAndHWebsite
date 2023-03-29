@@ -1,10 +1,16 @@
-.sectionContainer{
-
+.sectionsTitle{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.sectionsTitle{
-    padding: 0px 16px;
-    padding-top: 20px;
-    color: black;
-    font-size: 30px;
+.doodleBackground{
+    background: url('https://i.imgur.com/CVBDGBR.png');
+    background-size: cover;
+}
+
+.doodleBackground .sectionsTitle{
+    background-color: #ebd9abc2;
+    padding: 5px;
+    text-align: center;
 }

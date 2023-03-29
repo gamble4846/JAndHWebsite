@@ -12,7 +12,7 @@ export class CommonService {
     {name:"About Us", route:"/Home", elementId:"AboutUs"},
     {name:"Products", route:"/Home", elementId:"Products"},
     {name:"Services", route:"/Home", elementId:"Services"},
-    {name:"Quote Now", route:"/Home", elementId:"QuoteNow"},
+    {name:"Get Your Quote", route:"/Home", elementId:"QuoteNow"},
   ];
 
   constructor(private router:Router) { }

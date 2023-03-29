@@ -164,6 +164,12 @@ html {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .navBarContainer{
+    padding: 0px 50px;
+  }
+}
+
 .gs-footerMainConatiner {
   background-color: var(--footerBackgroundColor-gs-footer-one);
   font-family: "Inter" !important;

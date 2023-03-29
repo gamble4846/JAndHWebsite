@@ -3,8 +3,8 @@
   max-width: 1000px;
   height: max-content;
   color: white;
-  margin: 50px auto;
-  padding: 0px 10px;
+  margin: 0px auto;
+  padding: 50px 10px;
 }
 
 .card{
@@ -26,7 +26,6 @@
   border-radius: 5px;
   filter: brightness(50%);
   position: absolute;
-  z-index: -2;
   top: 0;
   left: 0;
 }
@@ -34,6 +33,7 @@
 .card-data{
   height: max-content;
   margin: auto;
+  z-index: 5;
 }
 
 .card-header{
