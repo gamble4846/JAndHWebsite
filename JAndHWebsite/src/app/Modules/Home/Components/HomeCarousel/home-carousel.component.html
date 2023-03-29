@@ -2,7 +2,7 @@
   <div *ngFor="let data of homeCarouselData" nz-carousel-content class="carousel-content" [ngStyle]="{'background-image': 'url('+ data.image +')'}">
     <div class="carousel-content-data">
       <div class="header">
-        BEST OFFER FOR YOU
+        {{data.subHeading}}
       </div>
       <div class="Title">
         {{data.header}}

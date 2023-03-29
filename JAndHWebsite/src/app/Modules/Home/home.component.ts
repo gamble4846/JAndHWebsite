@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
 
     this._GsDa.getProducts().subscribe((response:any) => {
       this.productsData = [...response.data];
+      console.log(this.productsData);
       completeCount++;
       this.apiGettingCompleted(completeCount, totalApi);
     })
@@ -77,6 +78,7 @@ export class HomeComponent implements OnInit {
         homeCarouselDataObj.image = product['Primary Image Link'];
         homeCarouselDataObj.header = product.Heading;
         homeCarouselDataObj.type = "Products";
+        homeCarouselDataObj.subHeading = product.SubHeading;
         this.homeCarouselData.push(homeCarouselDataObj);
       }
     });
@@ -88,6 +90,7 @@ export class HomeComponent implements OnInit {
         homeCarouselDataObj.image = service['Primary Image Link'];
         homeCarouselDataObj.header = service.Heading;
         homeCarouselDataObj.type = "Services";
+        homeCarouselDataObj.subHeading = service.SubHeading;
         this.homeCarouselData.push(homeCarouselDataObj);
       }
     });

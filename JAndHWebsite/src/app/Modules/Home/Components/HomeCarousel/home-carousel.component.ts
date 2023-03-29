@@ -13,6 +13,7 @@ export class HomeCarouselComponent implements OnInit {
   constructor(public _cs:CommonService) { }
 
   ngOnInit(): void {
+    console.log(this.homeCarouselData);
   }
 
   ngOnChanges() {
