@@ -8,21 +8,21 @@
 
 <div class="openerBreadcrumb">
     <div class="breadcrumb">
-        <div class="breadcrumbItem">Home</div>
+        <div class="breadcrumbItem" (click)="_cs.changePage('Home','Home')">Home</div>
         <div class="breadcrumbDevider">|</div>
-        <div class="breadcrumbItem">Services</div>
+        <div class="breadcrumbItem" (click)="_cs.changePage('/Home','Services')">Services</div>
         <div class="breadcrumbDevider">|</div>
         <div class="breadcrumbItem">{{Title}}</div>
     </div>
 </div>
 
-<div class="cards-container">
+<div class="cards-container doodleBackground">
     <div class="cardsInnerContainer">
         <div nz-row>
             <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol" *ngFor="let innerService of currentInnerServices">
                 <div class="cardContainer">
                     <div class="cardInnerContainer" (click)="cardClicked(innerService)">
-                        <div class="cardImageContainer"  [ngStyle]="{'background-image': 'url(https://i.pinimg.com/originals/27/3b/a6/273ba6d587afc5e853815d91db01d8df.jpg)'}">
+                        <div class="cardImageContainer"  [ngStyle]="{'background-image': 'url('+innerService['Image Link']+')'}">
 
                         </div>
                         <div class="cardDataContainer">

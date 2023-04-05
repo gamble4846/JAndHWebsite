@@ -1,6 +1,6 @@
 .scrollToTopButtonContainer{
-    width: 40px;
-    height: 40px;
+    width: max-content;
+    height: max-content;
     background-color: #032e49;
     display: flex;
     opacity: 0;
@@ -8,6 +8,7 @@
     transition: 0.3s ease-in-out;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     color: white;
     border-radius: 10px;
     cursor: pointer;

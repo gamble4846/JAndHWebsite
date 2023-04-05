@@ -4,11 +4,6 @@
     font-weight: bold;
 }
 
-.doodleBackground{
-    background: url('https://i.imgur.com/CVBDGBR.png');
-    background-size: cover;
-}
-
 .doodleBackground .sectionsTitle{
     background-color: #ebd9abc2;
     padding: 5px;
