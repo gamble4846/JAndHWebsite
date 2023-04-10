@@ -569,3 +569,8 @@ html {
   background: url('https://i.imgur.com/CVBDGBR.png');
   background-size: cover;
 }
+
+.InputContainer .ant-input-prefix{
+  padding: 5px;
+  padding-right: 0px;
+}

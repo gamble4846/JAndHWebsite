@@ -1,0 +1,82 @@
+<section class="contact-container">
+  <div class="contact-logo">
+    <img [src]="mainData.Icon" alt="Logo" width="60px" height="60px">
+  </div>
+  <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" class="contact-form">
+    <div class="heading">
+      <h2>CONTACT US</h2>
+      <p>feel free to reach out to us, we'd love to hear from you!</p>
+    </div>
+    <div class="InputContainer">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Full Name</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Full Name is Required">
+          <nz-input-group [nzPrefix]="prefixTemplateUser">
+            <input type="text" formControlName="name" nz-input placeholder="Enter your Name" />
+          </nz-input-group>
+          <ng-template #prefixTemplateUser><span nz-icon nzType="user"></span></ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="InputContainer">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Email</nz-form-label><br>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Email is Required">
+          <nz-input-group [nzPrefix]="prefixTemplateEmail">
+            <input type="text" formControlName="email" nz-input placeholder="Enter your Email" />
+          </nz-input-group>
+          <ng-template #prefixTemplateEmail><span nz-icon nzType="mail" nzTheme="outline"></span></ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="InputContainer">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Phone Number</nz-form-label><br>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Phone Number is Required">
+          <nz-input-group [nzPrefix]="prefixTemplatePhone">
+            <input type="text" formControlName="phoneNumber" nz-input placeholder="Enter your Phone Number" />
+          </nz-input-group>
+          <ng-template #prefixTemplatePhone><span nz-icon nzType="phone" nzTheme="outline"></span></ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="InputContainer">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Message</nz-form-label><br>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Message is Required">
+          <textarea formControlName="message" rows="4" nz-input placeholder="Enter your Message"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div class="InputContainer">
+      <nz-form-item>
+        <nz-form-control [nzSm]="6" [nzXs]="24"></nz-form-control>
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </form>
+  <div class="contact-info">
+    <h3 class="heading">OUR INFORMATIONS</h3>
+    <ul class="contacts">
+      <li>
+        <span nz-icon nzType="contacts" nzTheme="outline" style="margin-right: 5px;"></span>
+        <span [innerHTML]="_cs.getRenderedHtml(footerData.Address)"></span>
+      </li>
+      <li>
+        <a [href]="'mailto:'+_cs.getRenderedHtml(footerData.Email)" style="color: #e4e4e7;">
+          <span nz-icon nzType="mail" nzTheme="outline" style="margin-right: 5px;"></span>
+          <span [innerHTML]="_cs.getRenderedHtml(footerData.Email)"></span>
+        </a>
+      </li>
+      <li>
+        <a [href]="'tel:'+_cs.getRenderedHtml(footerData['Phone Number'])" style="color: #e4e4e7;">
+          <span nz-icon nzType="phone" nzTheme="outline" style="margin-right: 5px;"></span>
+          <span [innerHTML]="_cs.getRenderedHtml(footerData['Phone Number'])"></span>
+        </a>
+      </li>
+    </ul>
+    <div class="social-links"></div>
+  </div>
+</section>

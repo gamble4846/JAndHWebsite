@@ -1,33 +1,42 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { CommonService } from 'src/app/Services/CommonService/common.service';
 import { GoogleSheetDataAccessService } from 'src/app/Services/GoogleSheetDataAccess/google-sheet-data-access.service';
 
 @Component({
-  selector: 'app-contact-us-form',
-  templateUrl: './contact-us-form.component.html',
-  styleUrls: ['./contact-us-form.component.css']
+  selector: 'app-contact-us-form-new',
+  templateUrl: './contact-us-form-new.component.html',
+  styleUrls: ['./contact-us-form-new.component.css']
 })
-export class ContactUsFormComponent implements OnInit {
+export class ContactUsFormNewComponent implements OnInit {
 
   validateForm!: UntypedFormGroup;
+  
+  constructor(public _cs: CommonService,  public _GsDa:GoogleSheetDataAccessService, private fb: UntypedFormBuilder) { }
 
+  mainData:any = {};
+  footerData:any = {};
   apiData:any = {};
 
-  constructor(private fb: UntypedFormBuilder, public _GsDa:GoogleSheetDataAccessService, public _cs:CommonService) { }
-
   ngOnInit(): void {
+    this._GsDa.getMainData().subscribe((response:any) => {
+      this.mainData = response.data[0];
+    });
+
+    this._GsDa.getFooter().subscribe((res:any) => {
+      this.footerData = res.data[0];
+      console.log(this.footerData);
+    });
+
     this.validateForm = this.fb.group({
       name: ["", [Validators.required]],
       email: ["", [Validators.email, Validators.required]],
-      companyName: ["", []],
       phoneNumber: ["", []],
-      country: ["", [Validators.required]],
       message: ["", [Validators.required]]
     });
   }
 
-  submitForm(): void {
+  submitForm(){
     if (this.validateForm.valid) {
       this._cs.ShowLoader();
       console.log('submit', this.validateForm.value);
@@ -37,11 +46,11 @@ export class ContactUsFormComponent implements OnInit {
         this.apiData.Action = "CONTACTUS";
         this.apiData.FullName = this.validateForm.value['name'];
         this.apiData.Email = this.validateForm.value['email'];
-        this.apiData.CompanyName = this.validateForm.value['companyName'];
+        this.apiData.CompanyName = "";
         this.apiData.PhoneNumber = this.validateForm.value['phoneNumber'];
-        this.apiData.Country = this.validateForm.value['country'];
+        this.apiData.Country = "";
         this.apiData.Message = this.validateForm.value['message'];
-        this.apiData.ProductServiceCode = localStorage.getItem("currentInnerItemCode");
+        this.apiData.ProductServiceCode = "";
         this.apiData.DateTime = this.getCurrentDateTime();
         this._GsDa.postContactUsForm(this.apiData).subscribe((res:any) => {
           console.log(res);

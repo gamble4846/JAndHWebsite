@@ -17,8 +17,9 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { HomeGridComponent } from './Components/HomeGrid/home-grid.component';
 import { VerticalCardsComponent } from './Components/VerticalCards/vertical-cards.component';
-import { ModalModule } from '../../gs-lib/modal/modal.module'
-
+import { ModalModule } from '../../gs-lib/modal/modal.module';
+import { ContactUsFormNewComponent } from './Components/ContactUsFormNew/contact-us-form-new.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 
 
@@ -30,7 +31,8 @@ import { ModalModule } from '../../gs-lib/modal/modal.module'
     ServicesCarouselComponent,
     ContactUsFormComponent,
     HomeGridComponent,
-    VerticalCardsComponent
+    VerticalCardsComponent,
+    ContactUsFormNewComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import { ModalModule } from '../../gs-lib/modal/modal.module'
     ReactiveFormsModule,
     NzInputModule,
     NzGridModule,
-    ModalModule
+    ModalModule,
+    NzIconModule
   ],
   exports:[
     ContactUsFormComponent

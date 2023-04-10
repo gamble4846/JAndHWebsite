@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class CommonService {
     {name:"Get Your Quote", route:"/Home", elementId:"QuoteNow"},
   ];
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private message: NzMessageService) { }
 
   getMenuData(){
     return this.menuData;
@@ -51,8 +52,18 @@ export class CommonService {
   }
 
   getRenderedHtml(data:string){
-    let htmlSTR:string = data;
-    htmlSTR = htmlSTR.replace("&anter","<br>");
-    return htmlSTR;
+    try{
+      let htmlSTR:string = data;
+      htmlSTR = htmlSTR.replaceAll("&anter","<br>");
+      htmlSTR = htmlSTR.replaceAll("&plus","+");
+      return htmlSTR;
+    }
+    catch(ex){
+      return data;
+    }
+  }
+
+  showMessage(type: string, message:string): void {
+    this.message.create(type, message);
   }
 }
