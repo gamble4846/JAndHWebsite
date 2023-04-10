@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   
   menuData:any = [];
 
-  constructor(private _cs: CommonService, public _GsDa:GoogleSheetDataAccessService) { }
+  constructor(public _cs: CommonService, public _GsDa:GoogleSheetDataAccessService) { }
 
   ngOnInit(): void {
     this.menuData = this._cs.getMenuData();

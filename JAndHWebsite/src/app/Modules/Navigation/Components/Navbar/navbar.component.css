@@ -37,6 +37,19 @@
   height: calc(var(--menuHeight-gs-menu) - 10px);
 }
 
+.gs-menu-right-upper-container{
+  height: 100%;
+  display: flex;
+  width: max-content;
+}
+
+.contactUsMenuButtonContainer{
+  height: 100%;
+  align-items: center;
+  margin-right: 10px;
+  display: none;
+}
+
 .gs-menu-right-container .gs-menu-toggle-container .gs-menu-toggle-icon{
   height: calc(var(--menuHeight-gs-menu) - 35px);
   width: calc(var(--menuHeight-gs-menu) - 35px);
@@ -132,6 +145,10 @@
 
   .gs-menu .gs-menu-left-container .gs-menu-items{
       display: none;
+  }
+
+  .contactUsMenuButtonContainer{
+    display: flex;
   }
 }
 

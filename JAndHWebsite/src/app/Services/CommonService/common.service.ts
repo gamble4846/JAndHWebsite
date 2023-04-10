@@ -21,6 +21,10 @@ export class CommonService {
     return this.menuData;
   }
 
+  GetContactUsMenu(){
+    return {name:"Contact Us", route:"/Home", elementId:"ContactUs"}
+  }
+
   changePage(route:string, elementId:string){
     this.router.navigate([route]);
 
@@ -44,5 +48,11 @@ export class CommonService {
 
   HideLoader(){
     document.getElementById("loaderContainer")?.classList.remove("show");
+  }
+
+  getRenderedHtml(data:string){
+    let htmlSTR:string = data;
+    htmlSTR = htmlSTR.replace("&anter","<br>");
+    return htmlSTR;
   }
 }

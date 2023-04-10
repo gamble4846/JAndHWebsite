@@ -1,5 +1,6 @@
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { productGridData } from './productGridData.model';
+import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
   selector: 'gs-product-grid',
@@ -8,7 +9,9 @@ import { productGridData } from './productGridData.model';
 })
 export class ProductGridComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public _cs:CommonService,
+  ) { }
 
   //------------------- INPUTS ---------------------------
   @Input() imageHeight:number = 300;

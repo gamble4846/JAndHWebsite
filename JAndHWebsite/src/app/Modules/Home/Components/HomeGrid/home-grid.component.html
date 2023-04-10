@@ -3,7 +3,7 @@
     <div class="InnerGridCol" style="cursor: pointer;" [ngStyle]="{'background-image': 'url(' + data.image + ')'}"
       (click)="showMoreClicked(data)">
       <div class="InnerGridData">
-        <div class="title">{{data.header}}</div>
+        <div class="title"><span [innerHTML]="_cs.getRenderedHtml(data.header)"></span></div>
       </div>
       <div class="InnerGridLinkIcon">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 128 128">

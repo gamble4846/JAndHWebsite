@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
   selector: 'app-vertical-cards',
@@ -9,7 +10,7 @@ export class VerticalCardsComponent implements OnInit {
 
   @Input() makeToOrderData:any = [];
 
-  constructor() { }
+  constructor(public _cs:CommonService) { }
 
   ngOnInit(): void {
   }

@@ -26,8 +26,8 @@
 
                         </div>
                         <div class="cardDataContainer">
-                            <div class="cardTitle">{{innerProduct.Title}}</div>
-                            <div class="cardSubtitle">{{innerProduct['Inner Product Code']}}</div>
+                            <div class="cardTitle"><span [innerHTML]="_cs.getRenderedHtml(innerProduct.Title)"></span></div>
+                            <div class="cardSubtitle"><span [innerHTML]="_cs.getRenderedHtml(innerProduct['Inner Product Code'])"></span></div>
                         </div>
                     </div>
                 </div>

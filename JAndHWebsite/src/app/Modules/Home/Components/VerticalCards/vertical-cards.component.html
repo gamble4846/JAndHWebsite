@@ -7,10 +7,10 @@
         </div>
         <div class="card-data">
           <div class="card-header">
-            {{data.Title}}
+            <span [innerHTML]="_cs.getRenderedHtml(data.Title)"></span>
           </div>
           <div class="card-content">
-            {{data.Description}}
+            <span [innerHTML]="_cs.getRenderedHtml(data.Description)"></span>
           </div>
           <div class="card-footer">
             <button class="card-button">{{data.ButtonName}}</button>

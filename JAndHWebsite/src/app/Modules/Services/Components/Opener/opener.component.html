@@ -26,8 +26,8 @@
 
                         </div>
                         <div class="cardDataContainer">
-                            <div class="cardTitle">{{innerService.Title}}</div>
-                            <div class="cardSubtitle">{{innerService['Inner Service Code']}}</div>
+                            <div class="cardTitle"><span [innerHTML]="_cs.getRenderedHtml(innerService.Title)"></span></div>
+                            <div class="cardSubtitle"><span [innerHTML]="_cs.getRenderedHtml(innerService['Inner Service Code'])"></span></div>
                         </div>
                     </div>
                 </div>

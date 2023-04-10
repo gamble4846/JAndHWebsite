@@ -14,11 +14,13 @@ export class NavbarComponent implements OnInit {
   menuData:any = [];
   navbarData:any = {};
   navarbarLogo:string = "";
+  contactUsMenu:any = {};
 
-  constructor(private _cs: CommonService,  public _GsDa:GoogleSheetDataAccessService) { }
+  constructor(public _cs: CommonService,  public _GsDa:GoogleSheetDataAccessService) { }
 
   ngOnInit(): void {
     this.menuData = this._cs.getMenuData();
+    this.contactUsMenu = this._cs.GetContactUsMenu();
     this._GsDa.getMainData().subscribe((response:any) => {
       this.navbarData = response.data[0];
       this.navarbarLogo = this.navbarData.Logo;
@@ -36,7 +38,12 @@ export class NavbarComponent implements OnInit {
   }
 
   CloseMenu(){
+    console.log("here");
     this.menuOpen = false;
+  }
+
+  ToggleMenu(){
+    this.menuOpen = !this.menuOpen;
   }
 
   OpenRoute(menu:any){

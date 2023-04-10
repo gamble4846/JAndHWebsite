@@ -6,7 +6,7 @@
   <div class="aboutUsDataContainer">
     <div class="aboutUsHeader">About us</div>
     <div class="aboutUsContent">
-      {{aboutUsData.AboutUs}}
+      <span [innerHTML]="_cs.getRenderedHtml(aboutUsData.AboutUs)"></span>
     </div>
   </div>
   <div class="aboutUsImageContainer hideBefore800">

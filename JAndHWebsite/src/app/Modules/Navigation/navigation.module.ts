@@ -6,6 +6,7 @@ import { NavbarComponent } from './Components/Navbar/navbar.component';
 import { LoaderComponent } from './Components/Loader/loader/loader.component';
 import { FooterComponent } from './Components/Footer/footer.component';
 import { ScrollToTopComponent } from './Components/ScrollToTop/scroll-to-top.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ScrollToTopComponent } from './Components/ScrollToTop/scroll-to-top.com
   imports: [
     CommonModule,
     NavigationRoutingModule,
+    NzButtonModule
   ],
   exports:[
     NavbarComponent,

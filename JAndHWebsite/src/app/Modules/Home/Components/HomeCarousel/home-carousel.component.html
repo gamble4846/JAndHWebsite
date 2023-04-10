@@ -2,10 +2,10 @@
   <div *ngFor="let data of homeCarouselData" nz-carousel-content class="carousel-content" [ngStyle]="{'background-image': 'url('+ data.image +')'}">
     <div class="carousel-content-data">
       <div class="header">
-        {{data.subHeading}}
+        <span [innerHTML]="_cs.getRenderedHtml(data.subHeading)"></span>
       </div>
       <div class="Title">
-        {{data.header}}
+        <span [innerHTML]="_cs.getRenderedHtml(data.header)"></span>
       </div>
       <div class="ButtonContainer">
         <button nz-button nzType="primary" (click)="exploreNowClicked(data)">EXPLORE NOW</button>

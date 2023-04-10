@@ -6,7 +6,7 @@
                   About Us
               </div>
               <div class="gs-footBody">
-                  {{footerData.AboutUs}}
+                <span [innerHTML]="_cs.getRenderedHtml(footerData.AboutUs)"></span>
               </div>
           </div>
           <div class="gs-fotLinks">
@@ -24,8 +24,8 @@
                   Contact Us
               </div>
               <div class="gs-footBody">
-                    <p><b>Address - </b>{{footerData.Address}}</p>
-                    <p><b>Phone Number - </b>{{footerData['Phone Number']}}</p>
+                    <p><b>Address - </b><span [innerHTML]="_cs.getRenderedHtml(footerData.Address)"></span></p>
+                    <p><b>Phone Number - </b><span [innerHTML]="_cs.getRenderedHtml(footerData['Phone Number'])"></span></p>
               </div>
           </div>
       </div>
