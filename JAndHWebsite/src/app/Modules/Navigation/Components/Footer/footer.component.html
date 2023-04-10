@@ -16,6 +16,7 @@
               <div class="gs-footBody">
                   <ul class="gs-links-list">
                       <li *ngFor="let menu of menuData"><a (click)="OpenRoute(menu)">{{menu.name}}</a></li>
+                      <li><a (click)="OpenRoute(contactUsMenu)">{{contactUsMenu.name}}</a></li>
                   </ul>
               </div>
           </div>

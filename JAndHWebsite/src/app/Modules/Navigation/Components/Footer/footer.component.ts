@@ -12,11 +12,13 @@ export class FooterComponent implements OnInit {
   footerData:any = {};
   
   menuData:any = [];
+  contactUsMenu:any = {};
 
   constructor(public _cs: CommonService, public _GsDa:GoogleSheetDataAccessService) { }
 
   ngOnInit(): void {
     this.menuData = this._cs.getMenuData();
+    this.contactUsMenu = this._cs.GetContactUsMenu();
     this._GsDa.getFooter().subscribe((res:any) => {
       this.footerData = res.data[0];
     })

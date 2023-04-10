@@ -574,3 +574,12 @@ html {
   padding: 5px;
   padding-right: 0px;
 }
+
+body{
+  font-family: Rubik-Variable;
+}
+
+@font-face {
+  font-family: Rubik-Variable;
+  src: url(assets/fonts/Rubik-VariableFont_wght.ttf);
+}
