@@ -4,7 +4,7 @@
 
 <div class="sectionContainer aboutUsContainer" id="AboutUs">
   <div class="aboutUsDataContainer">
-    <div class="aboutUsHeader">About us</div>
+    <div class="aboutUsHeader" [style.fontFamily]="FontData['Headers']">About us</div>
     <div class="aboutUsContent">
       <span [innerHTML]="_cs.getRenderedHtml(aboutUsData.AboutUs)"></span>
     </div>
@@ -14,27 +14,27 @@
   </div>
 </div>
 
-<div class="sectionContainer doodleBackground" id="Products">
-  <div class="sectionsTitle">Products</div>
+<div class="sectionContainer doodleBackground" id="Products" [style.fontFamily]="FontData['Cards']">
+  <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Products</div>
   <div style="padding: 20px 0px; padding-bottom: 40px;">
     <app-home-grid [homeGridData]="productGridData"></app-home-grid>
   </div>
 </div>
 
-<div class="sectionContainer doodleBackground" id="Services">
-  <div class="sectionsTitle">Services</div>
+<div class="sectionContainer doodleBackground" id="Services" [style.fontFamily]="FontData['Cards']">
+  <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Services</div>
   <div style="padding: 20px 0px; padding-bottom: 40px;">
     <app-home-grid [homeGridData]="serviceGridData"></app-home-grid>
   </div>
 </div>
 
-<div class="sectionContainer doodleBackground">
-  <div class="sectionsTitle">Make To Order</div>
+<div class="sectionContainer doodleBackground" [style.fontFamily]="FontData['Make to Order']">
+  <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Make To Order</div>
   <app-vertical-cards [makeToOrderData]="makeToOrderData"></app-vertical-cards>
 </div>
 
 <div class="sectionContainer doodleBackground" id="QuoteNow">
-  <div class="sectionsTitle">Get Your Quote</div>
+  <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Get Your Quote</div>
   <div class="contactUsFormContainer">
     <div style="background-color: white; padding: 30px; border-radius: 15px;">
       <app-contact-us-form></app-contact-us-form>
@@ -43,7 +43,7 @@
 </div>
 
 <div class="sectionContainer doodleBackground" id="ContactUs">
-  <div class="sectionsTitle">Contact Us</div>
+  <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Contact Us</div>
   <div class="contactUsNewFormUpperContainer">
     <div class="contactUsNewFormContainer">
       <app-contact-us-form-new></app-contact-us-form-new>

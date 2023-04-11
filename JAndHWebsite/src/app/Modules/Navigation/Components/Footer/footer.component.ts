@@ -12,6 +12,7 @@ export class FooterComponent implements OnInit {
   footerData:any = {};
   
   menuData:any = [];
+  FontData:any = {};
   contactUsMenu:any = {};
 
   constructor(public _cs: CommonService, public _GsDa:GoogleSheetDataAccessService) { }
@@ -21,6 +22,11 @@ export class FooterComponent implements OnInit {
     this.contactUsMenu = this._cs.GetContactUsMenu();
     this._GsDa.getFooter().subscribe((res:any) => {
       this.footerData = res.data[0];
+    })
+    this._GsDa.getFonts().subscribe((response:any) => {
+      if(response.status == "200"){
+        this.FontData = response.data[0];
+      }
     })
   }
 

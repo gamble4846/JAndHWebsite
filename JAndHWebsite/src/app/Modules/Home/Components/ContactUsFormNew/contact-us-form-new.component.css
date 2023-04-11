@@ -1,21 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-  list-style: none;
-}
-
-body {
-  display: flex;
-  place-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #e8eaf6;
-}
-
 .contact-container {
   display: flex;
   flex-direction: row;

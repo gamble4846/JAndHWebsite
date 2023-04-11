@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class GoogleSheetDataAccessService {
 
-  apiLink:string = "https://script.google.com/macros/s/AKfycbxNgxsBmaTaPFmd6v2gVsTspBLQZNxOMasXJDvi5DsH6i5vPURRXrXwVA3C4UIeaaMMhg/exec";
+  apiLink:string = "https://script.google.com/macros/s/AKfycbyPpR2J7dy15ZOtARYBhHPH43pBDllwFvmvSI5SHm0z_yhfB_RPenwWWun42x0Tju1_vw/exec";
   constructor(private http: HttpClient) { }
 
   getOptions(){
@@ -85,6 +85,14 @@ export class GoogleSheetDataAccessService {
     var body ={
       "method": "GET",
       "Action": "MAIN"
+    };
+    return this.http.post(this.apiLink, body, this.getOptions());
+  }
+
+  getFonts(){
+    var body ={
+      "method": "GET",
+      "Action": "FONTS"
     };
     return this.http.post(this.apiLink, body, this.getOptions());
   }

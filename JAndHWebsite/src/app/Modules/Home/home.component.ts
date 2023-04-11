@@ -17,12 +17,18 @@ export class HomeComponent implements OnInit {
   homeCarouselData:any = [];
   productGridData:any = [];
   serviceGridData:any = [];
+  FontData:any = {};
 
   constructor(public _cs:CommonService, public _GsDa:GoogleSheetDataAccessService) { }
 
   ngOnInit(): void {
     localStorage.setItem("currentInnerItemCode", "");
     this.getApiData();
+    this._GsDa.getFonts().subscribe((response:any) => {
+      if(response.status == "200"){
+        this.FontData = response.data[0];
+      }
+    })
   }
 
   getApiData(){
