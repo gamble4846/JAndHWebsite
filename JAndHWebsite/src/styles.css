@@ -522,4 +522,8 @@ html {
   src: url(assets/fonts/Precious.ttf);
 }
 
+.modal-content{
+  overflow-y: auto;
+}
+
 
