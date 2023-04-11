@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'JAndHWebsite';
   showContactUsModal = false;
   FontData:any = {};
+  apiData:any = {};
 
   constructor(public _GsDa:GoogleSheetDataAccessService) { }
 
@@ -18,6 +19,16 @@ export class AppComponent {
       if(response.status == "200"){
         this.FontData = response.data[0];
       }
+    })
+
+    this._GsDa.getUserData().subscribe((response:any) => {
+      this.apiData = response;
+      this.apiData.method = "POST";
+      this.apiData.Action = "VIEWERDATA";
+      console.log("View Count",this.apiData);
+      this._GsDa.postViewerData(this.apiData).subscribe((response:any) => {
+        console.log(response);
+      })
     })
   }
 
