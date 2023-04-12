@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   z-index: 2;
+  font-family: Rubik-Variable;
 }
 
 .gs-menu .gs-menu-left-container .gs-menu-items .gs-menu-active{
