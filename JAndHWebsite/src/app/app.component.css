@@ -9,7 +9,7 @@
     width: max-content;
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 50px;
 }
 
 .contactUsFormContainer{
@@ -41,4 +41,22 @@
 
 #loaderContainer.show{
     display: flex !important;
+}
+
+.jandhNameContainerHome{
+    position: fixed;
+    text-align: center;
+    left: 0px;
+    top: 70px;
+    z-index: 998;
+    width: 100vw;
+    background-color: #032e49;
+    color: white;
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .jandhNameContainerHome{
+        display: none !important;
+    }
 }

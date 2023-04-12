@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class GoogleSheetDataAccessService {
 
-  apiLink:string = "https://script.google.com/macros/s/AKfycbxCDp0xwlIznasiOUDoh-lyJ2ebHNcuv688nmUv_krccHq96N-0LpIHPogYc7bMjPwc/exec";
+  apiLink:string = "https://script.google.com/macros/s/AKfycbwZMy8_M1s_9agLBI_MoqkK1xcdU7fsi4G1cbx8WHHvr0mhpAsw9jHHx0ajxfiBuvY/exec";
   constructor(private http: HttpClient) { }
 
   getOptions(){

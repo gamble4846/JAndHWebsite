@@ -1,7 +1,7 @@
 <div class="navBarContainer">
   <app-navbar></app-navbar>
 </div>
-<div class="routerContainer" id="routerContainer" onscroll="document.getElementById('onScrollCallerButton').click()" [style.fontFamily]="FontData['ALL']">
+<div class="routerContainer" id="routerContainer" onscroll="document.getElementById('onScrollCallerButton').click(); document.getElementById('onScrollCallerButtonForWebsite').click()" [style.fontFamily]="FontData['ALL']">
   <router-outlet></router-outlet>
 </div>
 <div class="ScrollToTopContainer">
@@ -24,3 +24,8 @@
 </gs-modal>
 
 <button (click)="ShowContactUsModal()" id="ShowContactUsModalBTN" style="display: none;"></button>
+<button (click)="ScrollForWebsiteName()" id="onScrollCallerButtonForWebsite" style="display: none;"></button>
+
+<div class="jandhNameContainerHome" #jandhNameContainerHome>
+  J & H Textiles
+</div>

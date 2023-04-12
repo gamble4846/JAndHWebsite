@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { GoogleSheetDataAccessService } from './Services/GoogleSheetDataAccess/google-sheet-data-access.service';
 
 @Component({
@@ -11,6 +11,9 @@ export class AppComponent {
   showContactUsModal = false;
   FontData:any = {};
   apiData:any = {};
+  lastScrollPOS:number = 0;
+
+  @ViewChild('jandhNameContainerHome') jandhNameContainerHome!:ElementRef;
 
   constructor(public _GsDa:GoogleSheetDataAccessService) { }
 
@@ -40,5 +43,34 @@ export class AppComponent {
 
   ShowContactUsModal(){
     this.showContactUsModal = true;
+  }
+
+  ScrollForWebsiteName(){
+    let routerContainer:any = document.getElementById("routerContainer");
+    try{
+      if (routerContainer.scrollTop > 30) {
+        this.jandhNameContainerHome.nativeElement.style.display = "block";
+      } else {
+        this.jandhNameContainerHome.nativeElement.style.display = "none";
+      }
+    }
+    catch(ex){}
+
+
+    try{
+      var st = routerContainer.scrollTop // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      console.log(st);
+      if (st > this.lastScrollPOS) {
+        this.jandhNameContainerHome.nativeElement.style.top = '70px';
+        this.jandhNameContainerHome.nativeElement.style.bottom = 'unset';
+      } else if (st < this.lastScrollPOS) {
+        this.jandhNameContainerHome.nativeElement.style.top = 'unset';
+        this.jandhNameContainerHome.nativeElement.style.bottom = '0px';
+      } // else was horizontal scroll
+      this.lastScrollPOS = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }
+    catch(ex){
+      console.log(ex);
+    }
   }
 }
