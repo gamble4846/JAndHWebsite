@@ -1,4 +1,4 @@
-<nz-carousel nzAutoPlay class="carousel-tag">
+<nz-carousel class="carousel-tag" #myCarousel>
   <div *ngFor="let data of homeCarouselData" nz-carousel-content class="carousel-content" [ngStyle]="{'background-image': 'url('+ data.image +')'}">
     <div class="carousel-content-data">
       <div class="header">

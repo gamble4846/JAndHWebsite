@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { CommonService } from 'src/app/Services/CommonService/common.service';
 
 @Component({
@@ -9,11 +10,14 @@ import { CommonService } from 'src/app/Services/CommonService/common.service';
 export class HomeCarouselComponent implements OnInit {
 
   @Input() homeCarouselData:any = [];
+  @ViewChild(NzCarouselComponent, { static: false }) myCarousel: NzCarouselComponent | undefined;
 
   constructor(public _cs:CommonService) { }
 
   ngOnInit(): void {
     console.log(this.homeCarouselData);
+    
+    setInterval(() => { this.myCarousel?.next(); }, 5000);
   }
 
   ngOnChanges() {

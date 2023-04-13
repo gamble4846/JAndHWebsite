@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { GoogleSheetDataAccessService } from './Services/GoogleSheetDataAccess/google-sheet-data-access.service';
+import { CommonService } from './Services/CommonService/common.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
 
   @ViewChild('jandhNameContainerHome') jandhNameContainerHome!:ElementRef;
 
-  constructor(public _GsDa:GoogleSheetDataAccessService) { }
+  constructor(public _GsDa:GoogleSheetDataAccessService, public _cs:CommonService) { }
 
   ngOnInit(): void {
     this._GsDa.getFonts().subscribe((response:any) => {
@@ -28,6 +29,7 @@ export class AppComponent {
       this.apiData = response;
       this.apiData.method = "POST";
       this.apiData.Action = "VIEWERDATA";
+      this.apiData.dateTime = this._cs.getCorrectDateTime();
       console.log("View Count",this.apiData);
       this._GsDa.postViewerData(this.apiData).subscribe((response:any) => {
         console.log(response);
