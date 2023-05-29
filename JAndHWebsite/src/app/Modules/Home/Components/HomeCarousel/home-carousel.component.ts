@@ -15,7 +15,6 @@ export class HomeCarouselComponent implements OnInit {
   constructor(public _cs:CommonService) { }
 
   ngOnInit(): void {
-    console.log(this.homeCarouselData);
     
     setInterval(() => { this.myCarousel?.next(); }, 5000);
   }

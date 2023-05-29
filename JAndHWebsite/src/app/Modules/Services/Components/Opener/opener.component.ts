@@ -55,7 +55,6 @@ export class OpenerComponent implements OnInit {
   apiGettingCompleted(currentCount:number, finalCount:number){
     if(currentCount >= finalCount){
       this._cs.HideLoader();
-      console.log(this.currentInnerServices);
     }
   }
 

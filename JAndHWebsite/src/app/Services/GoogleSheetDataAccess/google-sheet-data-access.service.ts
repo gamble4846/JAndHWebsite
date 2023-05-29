@@ -77,12 +77,10 @@ export class GoogleSheetDataAccessService {
   }
 
   postContactUsForm(body:any){
-    console.log(body);
     return this.http.post(this.apiLink, body, this.getOptions());
   }
 
   postViewerData(body:any){
-    console.log(body);
     return this.http.post(this.apiLink, body, this.getOptions());
   }
 

@@ -41,7 +41,6 @@ export class SelectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.selectData);
     this.dropDownChanged(false);
     this.searchValueChanged();
   }
@@ -168,8 +167,6 @@ export class SelectComponent implements OnInit {
     this.selectDataParentChild.forEach((fullOption:selectData) => {
       this.setAllChildrenAsChecked(fullOption);
     });
-
-    console.log(this.selectDataParentChild);
 
     this.dropDownChanged();
   }

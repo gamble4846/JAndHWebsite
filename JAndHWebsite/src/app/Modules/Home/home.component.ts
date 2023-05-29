@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit {
 
     this._GsDa.getProducts().subscribe((response:any) => {
       this.productsData = [...response.data];
-      console.log(this.productsData);
       completeCount++;
       this.apiGettingCompleted(completeCount, totalApi);
     })

@@ -25,7 +25,6 @@ export class ContactUsFormNewComponent implements OnInit {
 
     this._GsDa.getFooter().subscribe((res:any) => {
       this.footerData = res.data[0];
-      console.log(this.footerData);
     });
 
     this.validateForm = this.fb.group({
@@ -39,7 +38,6 @@ export class ContactUsFormNewComponent implements OnInit {
   submitForm(){
     if (this.validateForm.valid) {
       this._cs.ShowLoader();
-      console.log('submit', this.validateForm.value);
       this._GsDa.getUserData().subscribe((response:any) => {
         this.apiData = response;
         this.apiData.method = "POST";
@@ -53,7 +51,6 @@ export class ContactUsFormNewComponent implements OnInit {
         this.apiData.ProductServiceCode = "";
         this.apiData.DateTime = this.getCurrentDateTime();
         this._GsDa.postContactUsForm(this.apiData).subscribe((res:any) => {
-          console.log(res);
           if(res.status == "200"){
             this._cs.showMessage("success","Message Sent");
           }

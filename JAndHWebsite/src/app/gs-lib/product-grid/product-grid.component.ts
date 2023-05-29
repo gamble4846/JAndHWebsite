@@ -43,7 +43,6 @@ export class ProductGridComponent implements OnInit {
 
   updateImageWH(){
     this.innerWidth = window.innerWidth;
-    console.log(this.innerWidth);
     if(this.innerWidth > 650){
       this.mainWidth = this.imageWidth;
       this.mainHeight = this.imageHeight;

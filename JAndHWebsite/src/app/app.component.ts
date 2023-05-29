@@ -30,9 +30,7 @@ export class AppComponent {
       this.apiData.method = "POST";
       this.apiData.Action = "VIEWERDATA";
       this.apiData.dateTime = this._cs.getCorrectDateTime();
-      console.log("View Count",this.apiData);
       this._GsDa.postViewerData(this.apiData).subscribe((response:any) => {
-        console.log(response);
       })
     })
   }
@@ -61,7 +59,6 @@ export class AppComponent {
 
     try{
       var st = routerContainer.scrollTop // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-      console.log(st);
       if (st > this.lastScrollPOS) {
         this.jandhNameContainerHome.nativeElement.style.top = '70px';
         this.jandhNameContainerHome.nativeElement.style.bottom = 'unset';
@@ -72,7 +69,6 @@ export class AppComponent {
       this.lastScrollPOS = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     }
     catch(ex){
-      console.log(ex);
     }
   }
 }

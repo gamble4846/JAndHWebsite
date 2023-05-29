@@ -38,7 +38,6 @@ export class NavbarComponent implements OnInit {
   }
 
   CloseMenu(){
-    console.log("here");
     this.menuOpen = false;
   }
 
