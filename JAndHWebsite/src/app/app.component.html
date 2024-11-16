@@ -1,7 +1,9 @@
 <div class="navBarContainer">
   <app-navbar></app-navbar>
 </div>
-<div class="routerContainer" id="routerContainer" onscroll="document.getElementById('onScrollCallerButton').click(); document.getElementById('onScrollCallerButtonForWebsite').click()" [style.fontFamily]="FontData['ALL']">
+<div class="routerContainer" id="routerContainer"
+  onscroll="document.getElementById('onScrollCallerButton').click(); document.getElementById('onScrollCallerButtonForWebsite').click()"
+  [style.fontFamily]="FontData['ALL']">
   <router-outlet></router-outlet>
 </div>
 <div class="ScrollToTopContainer">
@@ -12,7 +14,8 @@
   <nz-spin nzSimple></nz-spin>
 </div>
 
-<gs-modal [showModal]="showContactUsModal" [showFooter]="false" (closeModal)="hideContactUsModal($event)" modalWidth="1200px" modalHeight="600px" modalBackgroundColor="#00000066">
+<gs-modal [showModal]="showContactUsModal" [showFooter]="false" (closeModal)="hideContactUsModal($event)"
+  modalWidth="1200px" modalHeight="600px" modalBackgroundColor="#00000066">
   <div header>Get Your Quote For - <span id="quoteSpan"></span></div>
   <div content>
     <div class="contactUsFormContainer">
@@ -29,3 +32,7 @@
 <div class="jandhNameContainerHome" #jandhNameContainerHome>
   J & H Textiles
 </div>
+<!-- 
+<div class="whatsappButtonContainerHome" #jandhNameContainerHome>
+  <span nz-icon nzType="whats-app" nzTheme="outline"></span>
+</div> -->

@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
-@import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
-@import "~ng-zorro-antd/button/style/index.min.css"; /* Import one component's styles */
+@import "~ng-zorro-antd/style/index.min.css";
+/* Import base styles */
+@import "~ng-zorro-antd/button/style/index.min.css";
+/* Import one component's styles */
 
 /*------------------------ Navbar Root ---------------------- */
 :root {
@@ -22,6 +24,7 @@
   --footerSocialBackgroundColor-gs-footer-one: #818a91;
   --transition-time-gs-footer-one: 0.3s;
 }
+
 /* ---------------------------------------------------------- */
 
 html {
@@ -32,7 +35,7 @@ html {
   height: calc(100vh - var(--menuHeight-gs-menu));
 }
 
-.contactUsFormContainer{
+.contactUsFormContainer {
   color: black;
   max-width: 1000px;
   padding: 30px;
@@ -40,7 +43,7 @@ html {
   position: relative;
 }
 
-.gs-menu-items-Mobile{
+.gs-menu-items-Mobile {
   padding-top: calc(var(--menuHeight-gs-menu) + 100px) !important;
 }
 
@@ -82,7 +85,7 @@ html {
   font-size: 35px;
 }
 
-.contactUsHeader{
+.contactUsHeader {
   font-size: 25px;
   margin-bottom: 10px;
 }
@@ -148,6 +151,7 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #1364ac;
 }
+
 /* ---------------------------------------------------------- */
 
 @media only screen and (max-width: 800px) {
@@ -165,7 +169,7 @@ html {
 }
 
 @media only screen and (min-width: 1000px) {
-  .navBarContainer{
+  .navBarContainer {
     padding: 0px 50px;
   }
 }
@@ -184,89 +188,50 @@ html {
   justify-content: space-around;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-about-us {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-about-us {
   width: 50%;
   height: 100%;
   padding: 10px;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotLinks {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotLinks {
   width: 25%;
   padding: 10px;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-footHeader {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footHeader {
   font-size: 25px;
   color: var(--footerHeader-Text-Color);
   padding-bottom: 10px;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-footBody {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody {
   color: var(--footerBody-Text-Color);
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-footBody
-  .gs-links-list {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-footBody
-  .gs-links-list
-  li {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li {
   padding: 0px 0px 8px 0px;
   width: max-content;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-footBody
-  .gs-links-list
-  li
-  a {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li a {
   cursor: pointer;
   display: block;
   transition: var(--transition-time-gs-footer-one);
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-footBody
-  .gs-links-list
-  li:hover
-  a {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li:hover a {
   color: black;
   transform: translate(15px, 1px) scale(125%);
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-footBody
-  .gs-links-list
-  li
-  a {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li a {
   color: black;
 }
 
@@ -274,47 +239,29 @@ html {
   margin: 20px 0px;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotter-left {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-left {
   width: 50%;
   text-align: left;
   font-size: 18px;
   color: var(--footerBody-Text-Color);
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotter-left
-  a {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-left a {
   display: inline-block;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotter-left
-  a:hover {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-left a:hover {
   color: black;
   cursor: pointer;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotter-right {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right {
   width: 50%;
   justify-content: right;
   display: flex;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotter-right
-  .gs-social-icon {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon {
   border-radius: 50%;
   background-color: #818a91;
   cursor: pointer;
@@ -326,12 +273,7 @@ html {
   display: block;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotter-right
-  .gs-social-icon
-  svg {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon svg {
   height: 30px;
   position: absolute;
   margin: auto;
@@ -341,11 +283,7 @@ html {
   right: 0;
 }
 
-.gs-footerMainConatiner
-  .gs-footerDataContainer
-  .gs-footerInnerContainer
-  .gs-fotter-right
-  .gs-social-icon:hover {
+.gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon:hover {
   border-radius: 20%;
 }
 
@@ -378,18 +316,12 @@ html {
     padding: 0px 0px;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-about-us {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-about-us {
     width: 100%;
     padding: 0px;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotLinks {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotLinks {
     width: 50%;
     padding: 0px;
     padding-top: 20px;
@@ -400,18 +332,12 @@ html {
     flex-wrap: wrap;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotter-left {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-left {
     width: 100%;
     text-align: center;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotter-right {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right {
     width: 100%;
     padding-top: 20px;
     justify-content: center;
@@ -423,91 +349,65 @@ html {
     padding: 0px 0px;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotLinks {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotLinks {
     width: 100%;
     padding: 0px;
     padding-top: 20px;
     text-align: center;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-footBody
-    .gs-links-list
-    li {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li {
     padding: 0px 0px 8px 0px;
     width: 100%;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotter-right
-    .gs-social-icon {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon {
     width: 30px;
     height: 30px;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotter-right
-    .gs-social-icon
-    svg {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon svg {
     height: 20px;
   }
 }
 
 @media screen and (max-width: 230px) {
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotter-right
-    .gs-social-icon {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon {
     width: 25px;
     height: 25px;
   }
 
-  .gs-footerMainConatiner
-    .gs-footerDataContainer
-    .gs-footerInnerContainer
-    .gs-fotter-right
-    .gs-social-icon
-    svg {
+  .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-fotter-right .gs-social-icon svg {
     height: 15px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .carousel-content-data .Title{
+  .carousel-content-data .Title {
     font-size: 45px !important;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .carousel-content-data .Title{
+  .carousel-content-data .Title {
     text-align: center !important;
   }
 
-  .carousel-content-data .header{
+  .carousel-content-data .header {
     text-align: center !important;
   }
-  .carousel-content-data .ButtonContainer{
+
+  .carousel-content-data .ButtonContainer {
     text-align: center !important;
   }
 }
 
 
-.doodleBackground{
-  background: url('https://i.imgur.com/CVBDGBR.png');
+.doodleBackground {
   background-size: cover;
 }
 
-.InputContainer .ant-input-prefix{
+.InputContainer .ant-input-prefix {
   padding: 5px;
   padding-right: 0px;
 }
@@ -522,8 +422,6 @@ html {
   src: url(assets/fonts/Precious.ttf);
 }
 
-.modal-content{
+.modal-content {
   overflow-y: auto;
 }
-
-
