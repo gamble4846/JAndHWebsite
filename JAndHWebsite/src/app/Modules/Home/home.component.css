@@ -1,23 +1,31 @@
-.sectionsTitle{
+.sectionsTitle {
     color: black;
-    font-size: 25px;
+    font-size: 50px;
     font-weight: bold;
+    font-family: Philosophers !important;
 }
 
-.doodleBackground .sectionsTitle{
-    background-color: #ebd9abc2;
+.doodleBackground .sectionsTitle {
+    /* background-color: #ebd9abc2; */
     padding: 5px;
     text-align: center;
+    padding-bottom: 0px;
+    color: #032e49;
 }
 
-.contactUsNewFormUpperContainer{
+.contactUsNewFormUpperContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-.contactUsNewFormContainer{
+.contactUsNewFormContainer {
     max-width: 1300px;
     padding: 30px;
+}
+
+.DimondUnderlineContainer {
+    text-align: center;
+    padding-bottom: 5px;
 }

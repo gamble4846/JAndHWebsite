@@ -7,24 +7,28 @@ import { LoaderComponent } from './Components/Loader/loader/loader.component';
 import { FooterComponent } from './Components/Footer/footer.component';
 import { ScrollToTopComponent } from './Components/ScrollToTop/scroll-to-top.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-
+import { WhatsAppButtonComponent } from './Components/WhatsAppButton/whats-app-button.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     LoaderComponent,
     FooterComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    WhatsAppButtonComponent
   ],
   imports: [
     CommonModule,
     NavigationRoutingModule,
-    NzButtonModule
+    NzButtonModule,
+    NzIconModule
   ],
-  exports:[
+  exports: [
     NavbarComponent,
     FooterComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    WhatsAppButtonComponent
   ]
 })
 export class NavigationModule { }

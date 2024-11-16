@@ -16,6 +16,7 @@
 
 <div class="sectionContainer doodleBackground" id="Products" [style.fontFamily]="FontData['Cards']">
   <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Products</div>
+  <div class="DimondUnderlineContainer"><ng-container *ngTemplateOutlet="DimondUnderline"></ng-container></div>
   <div style="padding: 20px 0px; padding-bottom: 40px;">
     <app-home-grid [homeGridData]="productGridData"></app-home-grid>
   </div>
@@ -23,6 +24,7 @@
 
 <div class="sectionContainer doodleBackground" id="Services" [style.fontFamily]="FontData['Cards']">
   <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Services</div>
+  <div class="DimondUnderlineContainer"><ng-container *ngTemplateOutlet="DimondUnderline"></ng-container></div>
   <div style="padding: 20px 0px; padding-bottom: 40px;">
     <app-home-grid [homeGridData]="serviceGridData"></app-home-grid>
   </div>
@@ -30,11 +32,13 @@
 
 <div class="sectionContainer doodleBackground" [style.fontFamily]="FontData['Make to Order']">
   <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Make To Order</div>
+  <div class="DimondUnderlineContainer"><ng-container *ngTemplateOutlet="DimondUnderline"></ng-container></div>
   <app-vertical-cards [makeToOrderData]="makeToOrderData"></app-vertical-cards>
 </div>
 
 <div class="sectionContainer doodleBackground" id="QuoteNow">
   <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Get Your Quote</div>
+  <div class="DimondUnderlineContainer"><ng-container *ngTemplateOutlet="DimondUnderline"></ng-container></div>
   <div class="contactUsFormContainer">
     <div style="background-color: white; padding: 30px; border-radius: 15px;">
       <app-contact-us-form></app-contact-us-form>
@@ -44,6 +48,7 @@
 
 <div class="sectionContainer doodleBackground" id="ContactUs">
   <div class="sectionsTitle" [style.fontFamily]="FontData['Headers']">Contact Us</div>
+  <div class="DimondUnderlineContainer"><ng-container *ngTemplateOutlet="DimondUnderline"></ng-container></div>
   <div class="contactUsNewFormUpperContainer">
     <div class="contactUsNewFormContainer">
       <app-contact-us-form-new></app-contact-us-form-new>
@@ -54,3 +59,42 @@
 <div class="sectionContainer">
   <app-footer></app-footer>
 </div>
+
+
+<ng-template #DimondUnderline>
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="visible" height="10px"
+    viewBox="0 0 24 24" fill="#949494FF" stroke="none">
+    <path
+      d="M12.7,2.3c-0.4-0.4-1.1-0.4-1.5,0l-8,9.1c-0.3,0.4-0.3,0.9,0,1.2l8,9.1c0.4,0.4,1.1,0.4,1.5,0l8-9.1c0.3-0.4,0.3-0.9,0-1.2L12.7,2.3z" />
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="visible" height="10px"
+    viewBox="0 0 24 24" fill="#949494FF" stroke="none">
+    <path
+      d="M12.7,2.3c-0.4-0.4-1.1-0.4-1.5,0l-8,9.1c-0.3,0.4-0.3,0.9,0,1.2l8,9.1c0.4,0.4,1.1,0.4,1.5,0l8-9.1c0.3-0.4,0.3-0.9,0-1.2L12.7,2.3z" />
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="visible" height="10px"
+    viewBox="0 0 24 24" fill="#949494FF" stroke="none">
+    <path
+      d="M12.7,2.3c-0.4-0.4-1.1-0.4-1.5,0l-8,9.1c-0.3,0.4-0.3,0.9,0,1.2l8,9.1c0.4,0.4,1.1,0.4,1.5,0l8-9.1c0.3-0.4,0.3-0.9,0-1.2L12.7,2.3z" />
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="visible" height="10px"
+    viewBox="0 0 24 24" fill="#949494FF" stroke="none">
+    <path
+      d="M12.7,2.3c-0.4-0.4-1.1-0.4-1.5,0l-8,9.1c-0.3,0.4-0.3,0.9,0,1.2l8,9.1c0.4,0.4,1.1,0.4,1.5,0l8-9.1c0.3-0.4,0.3-0.9,0-1.2L12.7,2.3z" />
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="visible" height="10px"
+    viewBox="0 0 24 24" fill="#949494FF" stroke="none">
+    <path
+      d="M12.7,2.3c-0.4-0.4-1.1-0.4-1.5,0l-8,9.1c-0.3,0.4-0.3,0.9,0,1.2l8,9.1c0.4,0.4,1.1,0.4,1.5,0l8-9.1c0.3-0.4,0.3-0.9,0-1.2L12.7,2.3z" />
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="visible" height="10px"
+    viewBox="0 0 24 24" fill="#949494FF" stroke="none">
+    <path
+      d="M12.7,2.3c-0.4-0.4-1.1-0.4-1.5,0l-8,9.1c-0.3,0.4-0.3,0.9,0,1.2l8,9.1c0.4,0.4,1.1,0.4,1.5,0l8-9.1c0.3-0.4,0.3-0.9,0-1.2L12.7,2.3z" />
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="visible" height="10px"
+    viewBox="0 0 24 24" fill="#949494FF" stroke="none">
+    <path
+      d="M12.7,2.3c-0.4-0.4-1.1-0.4-1.5,0l-8,9.1c-0.3,0.4-0.3,0.9,0,1.2l8,9.1c0.4,0.4,1.1,0.4,1.5,0l8-9.1c0.3-0.4,0.3-0.9,0-1.2L12.7,2.3z" />
+  </svg>
+</ng-template>

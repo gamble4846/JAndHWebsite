@@ -1,16 +1,22 @@
-.scrollToTopButtonContainer {
+.whatsappButtonContainerHome {
     width: max-content;
     height: max-content;
     background-color: #032e49;
     display: flex;
-    opacity: 0;
     pointer-events: none;
     transition: 0.3s ease-in-out;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     padding: 10px;
     color: white;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 10px;
+    height: 42px;
     width: 130px;
+}
+
+.whatsappButtonContainerHome img {
+    height: 100%;
+    cursor: pointer;
 }

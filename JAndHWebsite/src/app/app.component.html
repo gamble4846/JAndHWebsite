@@ -8,6 +8,8 @@
 </div>
 <div class="ScrollToTopContainer">
   <app-scroll-to-top></app-scroll-to-top>
+  <app-whats-app-button style="cursor: pointer;" *ngIf="this.footerData"
+    (click)="OpenWhatsapp()"></app-whats-app-button>
 </div>
 
 <div id="loaderContainer">
@@ -32,7 +34,3 @@
 <div class="jandhNameContainerHome" #jandhNameContainerHome>
   J & H Textiles
 </div>
-<!-- 
-<div class="whatsappButtonContainerHome" #jandhNameContainerHome>
-  <span nz-icon nzType="whats-app" nzTheme="outline"></span>
-</div> -->

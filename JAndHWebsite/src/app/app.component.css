@@ -1,10 +1,10 @@
-.navBarContainer{
-    -webkit-box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
-    -moz-box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
-    box-shadow: 0px 16px 12px 0px rgba(0,0,0,0.08);
+.navBarContainer {
+    -webkit-box-shadow: 0px 16px 12px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 16px 12px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 16px 12px 0px rgba(0, 0, 0, 0.08);
 }
 
-.ScrollToTopContainer{
+.ScrollToTopContainer {
     height: max-content;
     width: max-content;
     position: fixed;
@@ -12,7 +12,7 @@
     bottom: 50px;
 }
 
-.contactUsFormContainer{
+.contactUsFormContainer {
     display: flex;
     height: 100%;
     width: 100%;
@@ -20,12 +20,12 @@
     align-items: center;
 }
 
-.contactUsInnerFormContainer{
+.contactUsInnerFormContainer {
     width: 100%;
     height: 100%;
 }
 
-#loaderContainer{
+#loaderContainer {
     height: 100vh;
     width: 100vw;
     display: none;
@@ -39,11 +39,11 @@
     z-index: 999;
 }
 
-#loaderContainer.show{
+#loaderContainer.show {
     display: flex !important;
 }
 
-.jandhNameContainerHome{
+.jandhNameContainerHome {
     position: fixed;
     text-align: center;
     left: 0px;
@@ -56,7 +56,25 @@
 }
 
 @media screen and (min-width: 900px) {
-    .jandhNameContainerHome{
+    .jandhNameContainerHome {
+        display: none !important;
+    }
+}
+
+.whatsappButtonContainerHome {
+    position: fixed;
+    text-align: center;
+    left: 0px;
+    top: 100px;
+    z-index: 998;
+    width: 100vw;
+    background-color: #032e49;
+    color: white;
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .whatsappButtonContainerHome {
         display: none !important;
     }
 }

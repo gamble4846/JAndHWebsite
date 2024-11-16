@@ -422,6 +422,11 @@ html {
   src: url(assets/fonts/Precious.ttf);
 }
 
+@font-face {
+  font-family: Philosophers;
+  src: url(assets/fonts/Philosopher.ttf);
+}
+
 .modal-content {
   overflow-y: auto;
 }

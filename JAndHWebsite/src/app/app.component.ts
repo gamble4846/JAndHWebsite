@@ -10,54 +10,69 @@ import { CommonService } from './Services/CommonService/common.service';
 export class AppComponent {
   title = 'JAndHWebsite';
   showContactUsModal = false;
-  FontData:any = {};
-  apiData:any = {};
-  lastScrollPOS:number = 0;
+  FontData: any = {};
+  apiData: any = {};
+  lastScrollPOS: number = 0;
+  footerData: any = {};
 
-  @ViewChild('jandhNameContainerHome') jandhNameContainerHome!:ElementRef;
+  @ViewChild('jandhNameContainerHome') jandhNameContainerHome!: ElementRef;
 
-  constructor(public _GsDa:GoogleSheetDataAccessService, public _cs:CommonService) { }
+  constructor(public _GsDa: GoogleSheetDataAccessService, public _cs: CommonService) { }
 
   ngOnInit(): void {
-    this._GsDa.getFonts().subscribe((response:any) => {
-      if(response.status == "200"){
+    this._GsDa.getFonts().subscribe((response: any) => {
+      if (response.status == "200") {
         this.FontData = response.data[0];
       }
     })
 
-    this._GsDa.getUserData().subscribe((response:any) => {
+    this._GsDa.getUserData().subscribe((response: any) => {
       this.apiData = response;
       this.apiData.method = "POST";
       this.apiData.Action = "VIEWERDATA";
       this.apiData.dateTime = this._cs.getCorrectDateTime();
-      this._GsDa.postViewerData(this.apiData).subscribe((response:any) => {
+      this._GsDa.postViewerData(this.apiData).subscribe((response: any) => {
       })
+    })
+
+    this.updateFooterData();
+  }
+
+  OpenWhatsapp() {
+    if (this.footerData) {
+      window.open(`https://wa.me/91` + this.footerData['Phone Number'].slice(-10), "_blank");
+    }
+  }
+
+  updateFooterData() {
+    this._GsDa.getFooter().subscribe((res: any) => {
+      this.footerData = res.data[0];
     })
   }
 
-  hideContactUsModal(event:any){
-    if(event){
+  hideContactUsModal(event: any) {
+    if (event) {
       this.showContactUsModal = false;
     }
   }
 
-  ShowContactUsModal(){
+  ShowContactUsModal() {
     this.showContactUsModal = true;
   }
 
-  ScrollForWebsiteName(){
-    let routerContainer:any = document.getElementById("routerContainer");
-    try{
+  ScrollForWebsiteName() {
+    let routerContainer: any = document.getElementById("routerContainer");
+    try {
       if (routerContainer.scrollTop > 30) {
         this.jandhNameContainerHome.nativeElement.style.display = "block";
       } else {
         this.jandhNameContainerHome.nativeElement.style.display = "none";
       }
     }
-    catch(ex){}
+    catch (ex) { }
 
 
-    try{
+    try {
       var st = routerContainer.scrollTop // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
       if (st > this.lastScrollPOS) {
         this.jandhNameContainerHome.nativeElement.style.top = '70px';
@@ -68,7 +83,7 @@ export class AppComponent {
       } // else was horizontal scroll
       this.lastScrollPOS = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     }
-    catch(ex){
+    catch (ex) {
     }
   }
 }
