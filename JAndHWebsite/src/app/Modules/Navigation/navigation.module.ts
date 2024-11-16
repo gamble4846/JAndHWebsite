@@ -9,6 +9,9 @@ import { ScrollToTopComponent } from './Components/ScrollToTop/scroll-to-top.com
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { WhatsAppButtonComponent } from './Components/WhatsAppButton/whats-app-button.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { FooterNewComponent } from './Components/FooterNew/footer-new.component';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @NgModule({
   declarations: [
@@ -16,19 +19,23 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     LoaderComponent,
     FooterComponent,
     ScrollToTopComponent,
-    WhatsAppButtonComponent
+    WhatsAppButtonComponent,
+    FooterNewComponent
   ],
   imports: [
     CommonModule,
     NavigationRoutingModule,
     NzButtonModule,
-    NzIconModule
+    NzIconModule,
+    NzCollapseModule,
+    NzGridModule
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
     ScrollToTopComponent,
-    WhatsAppButtonComponent
+    WhatsAppButtonComponent,
+    FooterNewComponent
   ]
 })
 export class NavigationModule { }

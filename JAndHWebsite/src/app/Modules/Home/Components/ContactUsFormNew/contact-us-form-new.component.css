@@ -4,7 +4,7 @@
   width: 100%;
   margin: 0px;
   border-radius: 4px;
-  background-color: #334155;
+  background-color: #02253c;
 }
 
 .contact-form {
@@ -108,15 +108,16 @@
   padding: 24px 32px 40px 32px;
 }
 
-.InputContainer{
+.InputContainer {
   margin: 10px 0px;
 }
 
-.InputContainer input,.InputContainer textarea{
+.InputContainer input,
+.InputContainer textarea {
   padding: 5px 10px;
 }
 
-.InputContainer button{
+.InputContainer button {
   padding: 5px 10px;
 }
 

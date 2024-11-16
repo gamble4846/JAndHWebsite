@@ -1,0 +1,135 @@
+.innerFooterContainer {
+    max-width: 1300px;
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #02253c;
+    color: #dbdbdb;
+    padding: 0px 10px;
+    font-size: 18px;
+}
+
+.contactContainer {
+    display: flex;
+    padding: 10px 5px;
+}
+
+.dataContainer .header {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    min-width: 60px;
+    overflow: hidden;
+}
+
+.contactOuterContainer {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 10px;
+}
+
+.footerDataContainer .dataColumn {
+    padding: 10px;
+}
+
+.footerDataContainer .dataColumn .headerContainer {
+    padding: 5px 0px;
+    padding-bottom: 20px;
+}
+
+.footerDataContainer .dataColumn .headerContainer .header {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.footerDataContainer .dataColumn .headerContainer .header::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 40px;
+    background-color: #caedf7;
+    left: 0;
+    bottom: -10px;
+}
+
+.links.bodyContainer {
+    display: flex;
+}
+
+.links.bodyContainer .linksList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links.bodyContainer .linksList li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    color: #dbdbdb;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.links.bodyContainer .linksList li a {
+    color: #dbdbdb;
+}
+
+.links.bodyContainer .linksList li:hover {
+    color: #caedf7;
+}
+
+.links.bodyContainer .linksList li a:hover {
+    color: #caedf7;
+}
+
+.copyrightAndSocialContainer {
+    background-color: #011c2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.innerCopyrightAndSocialContainer {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.innerCopyrightAndSocialContainer .copyrightContainer {
+    color: #dbdbdb;
+    display: flex;
+    align-items: center;
+}
+
+.innerCopyrightAndSocialContainer .socialContainer {
+    display: flex;
+}
+
+.socialContainer span[nz-icon] {
+    font-size: 30px;
+    padding: 0px 5px;
+    color: #dbdbdb;
+}
+
+.socialContainer span[nz-icon]:hover {
+    color: #caedf7;
+    cursor: pointer;
+}
