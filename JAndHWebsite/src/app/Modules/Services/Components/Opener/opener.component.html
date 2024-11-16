@@ -19,15 +19,19 @@
 <div class="cards-container doodleBackground">
     <div class="cardsInnerContainer">
         <div nz-row>
-            <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol" *ngFor="let innerService of currentInnerServices">
+            <div nz-col nzXs="24" nzSm="12" nzMd="12" nzLg="6" class="GridCol"
+                *ngFor="let innerService of currentInnerServices">
                 <div class="cardContainer">
                     <div class="cardInnerContainer" (click)="cardClicked(innerService)">
-                        <div class="cardImageContainer"  [ngStyle]="{'background-image': 'url('+innerService['Image Link']+')'}">
+                        <div class="cardImageContainer"
+                            [ngStyle]="{'background-image': 'url('+innerService['Image Link']+')'}">
 
                         </div>
                         <div class="cardDataContainer">
-                            <div class="cardTitle"><span [innerHTML]="_cs.getRenderedHtml(innerService.Title)"></span></div>
-                            <div class="cardSubtitle"><span [innerHTML]="_cs.getRenderedHtml(innerService['Inner Service Code'])"></span></div>
+                            <div class="cardTitle"><span [innerHTML]="_cs.getRenderedHtml(innerService.Title)"></span>
+                            </div>
+                            <div class="cardSubtitle"><span
+                                    [innerHTML]="_cs.getRenderedHtml(innerService['Inner Service Code'])"></span></div>
                         </div>
                     </div>
                 </div>
@@ -37,5 +41,5 @@
 </div>
 
 <div class="sectionContainer">
-    <app-footer></app-footer>
+    <app-footer-new></app-footer-new>
 </div>

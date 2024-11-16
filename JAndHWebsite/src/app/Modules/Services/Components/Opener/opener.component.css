@@ -1,4 +1,4 @@
-.openerHeaderContainer{
+.openerHeaderContainer {
     position: relative;
     height: 250px;
     background-repeat: no-repeat;
@@ -10,8 +10,8 @@
     justify-content: center;
 }
 
-.openerHeader{
-    font-size: 30px;
+.openerHeader {
+    font-size: 72px;
     line-height: 28px;
     color: #032e49;
     font-weight: 900;
@@ -19,9 +19,10 @@
     max-width: 1200px;
     margin: 0px 20px;
     text-transform: uppercase;
+    text-align: center;
 }
 
-.openerBreadcrumb{
+.openerBreadcrumb {
     background: #eaf7ff;
     padding: 13px 0;
     border-bottom: 1px solid #e6e6e6;
@@ -30,7 +31,7 @@
     justify-content: center;
 }
 
-.openerBreadcrumb .breadcrumb{
+.openerBreadcrumb .breadcrumb {
     width: 100%;
     max-width: 1200px;
     margin: 0px 20px;
@@ -40,16 +41,16 @@
     display: flex;
 }
 
-.breadcrumbItem{
+.breadcrumbItem {
     padding-right: 10px;
     cursor: pointer;
 }
 
-.breadcrumbDevider{
+.breadcrumbDevider {
     padding-right: 10px;
 }
 
-.cards-container{
+.cards-container {
     color: #032e49;
     display: flex;
     justify-content: center;
@@ -57,25 +58,25 @@
     padding: 10px;
 }
 
-.cardsInnerContainer{
+.cardsInnerContainer {
     width: 100%;
     max-width: 1200px;
     display: block;
 }
 
-.cardContainer{
+.cardContainer {
     padding: 10px 10px;
 }
 
-.cardInnerContainer{
-    border: 1px solid rgba(0,0,0,.06);
+.cardInnerContainer {
+    border: 1px solid rgba(0, 0, 0, .06);
     border-radius: 5px;
     overflow: hidden;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
-.cardImageContainer{
+.cardImageContainer {
     height: 200px;
     width: 100%;
     background-repeat: no-repeat;
@@ -83,12 +84,12 @@
     background-position: center;
 }
 
-.cardDataContainer{
+.cardDataContainer {
     padding: 30px 10px;
     background-color: white;
 }
 
-.cardDataContainer .cardTitle{
+.cardDataContainer .cardTitle {
     font-weight: 500;
     font-size: 25px;
     white-space: nowrap;
@@ -96,7 +97,7 @@
     width: 100%;
 }
 
-.cardDataContainer  .cardSubtitle{
+.cardDataContainer .cardSubtitle {
     font-size: 13px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -104,6 +105,6 @@
     color: #00000073;
 }
 
-.cardInnerContainer:hover{
+.cardInnerContainer:hover {
     box-shadow: 0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017;
 }
